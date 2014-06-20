@@ -7,10 +7,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Tags</title>
+	<title>防止DNS污染的小工具</title>
 	<meta name="author" content="chengkai">
 	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/" rel="alternate" title="Tags" type="application/atom+xml">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="防止DNS污染的小工具" type="application/atom+xml">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
 <body>
@@ -38,13 +38,13 @@
 			<div class="unit-inner unit-body-inner">
 				<div class="entry-content">
 					
-<article class="unit-article layout-page">
+<article class="unit-article layout-post">
 	<div class="unit-inner unit-article-inner">
 		<div class="content">
 			<header>
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h1 class="h2 entry-title">Tags</h1>
+						<h1 class="h2 entry-title">防止DNS污染的小工具</h1>
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
 			</header>
@@ -52,21 +52,83 @@
 			<div class="bd">
 				<div class="entry-content">
 					
+<p>以前写的小工具，最近整理代码，再这里公布出来。这个小工具用于获取被gfw dns 污染域名的真实ip地址，通常可以用于获取twitter,youtube,facebook等网址的真实ip地址。如果你的某些程序需要绕过GFW DNS污染也许这些代码片断会用的上，分别提供了c语言和java的实现版本。</p>
 
-<ul class="tag_box inline">
+<p><a href="https://github.com/examplecode/gfw_dns_resolver">前往 github 源码地址</a></p>
+
+<h2 id="c-">C 语言版本</h2>
+
+<h3 id="section">编译</h3>
+
+<pre><code>gcc -o gfw_dns_resolver  gfw_dns_resolver.c 
+</code></pre>
+
+<p>编译输出调试信息版本</p>
+
+<pre><code>gcc -o gfw_dns_resolver -DDEBUG gfw_dns_resolver.c 
+</code></pre>
+
+<h3 id="section-1">运行示例</h3>
+
+<pre><code>./gfw_dns_resolver www.twitter.com
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>The real ip is: 199.59.149.230
+</code></pre>
+
+<h2 id="java-">JAVA 版本</h2>
+
+<h3 id="section-2">编译</h3>
+
+<pre><code>javac GFWDnsResolver.java
+</code></pre>
+
+<h3 id="section-3">运行示例</h3>
+<pre><code>java GFWDnsResolver www.youtube.com
+</code></pre>
+
+<p>输出：</p>
+
+<pre><code>host:www.youtube.com The real ip is:173.194.72.102
+</code></pre>
+
+<p><a href="https://github.com/examplecode/gfw_dns_resolver">前往 github 源码地址</a></p>
+
+
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2014-06-20T00:00:00+08:00" datetime="2014-06-20T00:00:00+08:00" pubdate>
+							<span class="month"><abbr>June</abbr></span>
+							<span class="day">20</span>
+							<span class="year">2014</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#tools-ref">
+    		tools <span>1</span>
+    	</a></li>
     
   
 
 
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
   
-     
-    	<li><a href="/tags.html#intro-ref">intro <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#beginner-ref">beginner <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#jekyll-ref">jekyll <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>1</span></a></li>
      
     	<li><a href="/tags.html#gfw-ref">gfw <span>1</span></a></li>
      
@@ -78,156 +140,54 @@
 
 
 
-</ul>
-
-
- 
-  <h2 id="intro-ref">intro</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="beginner-ref">beginner</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="jekyll-ref">jekyll</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="tutorial-ref">tutorial</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="gfw-ref">gfw</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution">防止DNS污染的小工具</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="dns-ref">dns</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution">防止DNS污染的小工具</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution">防止DNS污染的小工具</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
-
-
+						</ul>
+					</div><!-- meta -->
 				</div><!-- entry-content -->
-			</div><!-- bd -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="chengkai_me" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/chengkai_me" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					<div class="comment">
+					
 
+
+  <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"examplecode"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+					</div>
+				</div><!-- misc-content -->
+			</div><!-- bd -->
 			<footer class="unit-foot">
 				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/2014/06/15/hijekyll" title="View Hi,Jekyll">&laquo; Hi,Jekyll</a></li>
+							
+							
+							
+						</ul>
+					</nav>
 					<p class="gotop">
 						<a href="#page">Back to Top</a>
 					</p>
@@ -273,7 +233,7 @@
 		};
 	load('//platform.twitter.com/widgets.js', 'tweetjs');
 	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
-	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/tags.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 	}(document, 'script'));
 </script>
 <script>

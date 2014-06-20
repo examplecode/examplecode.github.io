@@ -5,10 +5,63 @@
         <description>Example Code - chengkai</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-16T22:41:15+08:00</lastBuildDate>
-        <pubDate>2014-06-16T22:41:15+08:00</pubDate>
+        <lastBuildDate>2014-06-20T17:24:09+08:00</lastBuildDate>
+        <pubDate>2014-06-20T17:24:09+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>防止DNS污染的小工具</title>
+                <description>
+&lt;p&gt;以前写的小工具，最近整理代码，再这里公布出来。这个小工具用于获取被gfw dns 污染域名的真实ip地址，通常可以用于获取twitter,youtube,facebook等网址的真实ip地址。如果你的某些程序需要绕过GFW DNS污染也许这些代码片断会用的上，分别提供了c语言和java的实现版本。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/examplecode/gfw_dns_resolver&quot;&gt;前往 github 源码地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;c-&quot;&gt;C 语言版本&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;编译&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -o gfw_dns_resolver  gfw_dns_resolver.c 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;编译输出调试信息版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gcc -o gfw_dns_resolver -DDEBUG gfw_dns_resolver.c 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;运行示例&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;./gfw_dns_resolver www.twitter.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;输出:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;The real ip is: 199.59.149.230
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;java-&quot;&gt;JAVA 版本&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;编译&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;javac GFWDnsResolver.java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;运行示例&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;java GFWDnsResolver www.youtube.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;输出：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;host:www.youtube.com The real ip is:173.194.72.102
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/examplecode/gfw_dns_resolver&quot;&gt;前往 github 源码地址&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <link>http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution</link>
+                <guid>http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution</guid>
+                <pubDate>2014-06-20T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>Hi,Jekyll</title>
