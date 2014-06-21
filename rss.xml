@@ -5,8 +5,8 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-21T21:10:32+08:00</lastBuildDate>
-        <pubDate>2014-06-21T21:10:32+08:00</pubDate>
+        <lastBuildDate>2014-06-21T21:29:57+08:00</lastBuildDate>
+        <pubDate>2014-06-21T21:29:57+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -17,11 +17,7 @@
 
 &lt;p&gt;网址: &lt;a href=&quot;https://stackedit.io&quot;&gt;https://stackedit.io&lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;写MarkeDown所见即所得，支持保存到本地的不同格式(html,pdf,markedown)&lt;/li&gt;
-  &lt;li&gt;支持同步到Google Drive,Drop Box.&lt;/li&gt;
-  &lt;li&gt;支持发布到 github,gist,wordpress 等等&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;非常棒的MarkDown在线编辑工具，写MarkeDown所见即所得，支持保存到本地的不同格式(html,pdf,markedown);支持同步到Google Drive,Drop Box.支持发布到 github,gist,wordpress 等等。&lt;/p&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;脚本和命令行查找&lt;/h3&gt;
 
@@ -38,18 +34,12 @@
 &lt;p&gt;下面是个demo&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;          +------------+        
-          |            |        
-          | BaseClass  |        
-   +----&amp;gt; |            | &amp;lt;--+   
-   |      |            |    |   
-   |      +------------+    |   
-   |                        |   
-   |                        |   
-   |                        |   
-+--+-------+        +-------+--+
-|          |        |          |
+    +---&amp;gt; | BaseClass  | &amp;lt;--+   
+    |     |            |    |   
+    |     +------------+    |   
+    |                       |   
++---+------+        +-------+--+
 |SubClassA |        |SubClassB |
-|          |        |          |
 |          |        |          |
 +----------+        +----------+
 &lt;/code&gt;&lt;/pre&gt;
