@@ -4,7 +4,7 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-22T09:21:55+08:00</updated>
+ <updated>2014-06-22T09:34:37+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
@@ -84,7 +84,7 @@
  </entry>
  
  <entry>
-   <title>防止DNS污染的小工具</title>
+   <title>GFW DNS污染原理 - 防止DNS污染的小工具</title>
    <link href="http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution"/>
    <updated>2014-06-20T00:00:00+08:00</updated>
    <id>http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution</id>

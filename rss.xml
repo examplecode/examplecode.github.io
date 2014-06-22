@@ -5,8 +5,8 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-22T09:21:55+08:00</lastBuildDate>
-        <pubDate>2014-06-22T09:21:55+08:00</pubDate>
+        <lastBuildDate>2014-06-22T09:34:37+08:00</lastBuildDate>
+        <pubDate>2014-06-22T09:34:37+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -82,7 +82,7 @@
         </item>
 
         <item>
-                <title>防止DNS污染的小工具</title>
+                <title>GFW DNS污染原理 - 防止DNS污染的小工具</title>
                 <description>
 &lt;p&gt;以前写的小工具，最近整理代码，再这里公布出来。这个小工具用于获取被gfw dns 污染域名的真实ip地址，通常可以用于获取twitter,youtube,facebook等网址的真实ip地址。如果你的某些程序需要绕过GFW DNS污染也许这些代码片断会用的上，分别提供了c语言和java的实现版本。&lt;/p&gt;
 
