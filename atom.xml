@@ -4,7 +4,7 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-22T09:03:15+08:00</updated>
+ <updated>2014-06-22T09:21:55+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
@@ -96,8 +96,8 @@
 &lt;p&gt;GFW对域名进行DNS污染的原理实际上是在正常的DNS服务器返回请求包之前，返回请求者错误的IP地址。而GFW返回的这些错误地址也是有规律可循，根据这个原理我们就不难写出对抗GFW DNS污染的程序了。所以我提供的小程序核心内容就有两点：&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;提供GFW返回IP的一个黑名单列表&lt;/li&gt;
-  &lt;li&gt;如果服务端返回的DNS响应IP地址在黑名单列表中，则进行忽略并尝试等待争取的ip地址返回.&lt;/li&gt;
+  &lt;li&gt;提供GFW返回IP的一个黑名单列表。&lt;/li&gt;
+  &lt;li&gt;如果服务端返回的DNS响应IP地址在黑名单列表中，则进行忽略并尝试等待真实的ip地址返回。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/examplecode/gfw_dns_resolver&quot;&gt;前往 github 源码地址&lt;/a&gt;&lt;/p&gt;

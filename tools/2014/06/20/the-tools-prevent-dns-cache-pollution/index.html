@@ -61,8 +61,8 @@
 <p>GFW对域名进行DNS污染的原理实际上是在正常的DNS服务器返回请求包之前，返回请求者错误的IP地址。而GFW返回的这些错误地址也是有规律可循，根据这个原理我们就不难写出对抗GFW DNS污染的程序了。所以我提供的小程序核心内容就有两点：</p>
 
 <ol>
-  <li>提供GFW返回IP的一个黑名单列表</li>
-  <li>如果服务端返回的DNS响应IP地址在黑名单列表中，则进行忽略并尝试等待争取的ip地址返回.</li>
+  <li>提供GFW返回IP的一个黑名单列表。</li>
+  <li>如果服务端返回的DNS响应IP地址在黑名单列表中，则进行忽略并尝试等待真实的ip地址返回。</li>
 </ol>
 
 <p><a href="https://github.com/examplecode/gfw_dns_resolver">前往 github 源码地址</a></p>
