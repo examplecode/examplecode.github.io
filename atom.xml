@@ -4,7 +4,7 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-22T09:34:37+08:00</updated>
+ <updated>2014-06-23T09:11:42+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
@@ -58,7 +58,7 @@
 
 &lt;h3 id=&quot;ip&quot;&gt;查看出口ip地址&lt;/h3&gt;
 
-&lt;p&gt;网址: http://www.ifconfig.me&lt;/p&gt;
+&lt;p&gt;网址: &lt;a href=&quot;http://www.ifconfig.me&quot;&gt;http://www.ifconfig.me&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;不做解释，看域名就知道。&lt;/p&gt;
 
