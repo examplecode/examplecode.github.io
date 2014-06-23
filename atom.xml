@@ -4,13 +4,150 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-23T09:11:42+08:00</updated>
+ <updated>2014-06-23T11:06:35+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
    <email>chengkai.me@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>android下针对UI的单元测试工具</title>
+   <link href="http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android"/>
+   <updated>2014-06-23T00:00:00+08:00</updated>
+   <id>http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android</id>
+   <content type="html">
+&lt;p&gt;这是一个非常简单的测试框架，帮助我们测试一些UI相关的用例，通常情况下我们使用Junit编写单元测试只是针对没有界面的非UI用例，而对于和界面相关的逻辑操作测试起来就不太方便，比如我只想
+看看这个界面的运行效果，看看界面的布局是否达到预期 Junit就满足不了我们的要求。通常我们不得不创建一个很小的demo来演示我们的界面，那么UITestRunner就是帮助android开发者解决类似的问
+题的，其实他就是你需要的那个很小的demo,只是他更加方便的以类似JUnitTest的方式把你的所有用例组织起来（你只要写一个以“test”开头的方法即可），并且把这些用例以列表的方式显示出来，测试其中一个用例，只需要点击列表项即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;源码地址:&lt;/strong&gt;&lt;a href=&quot;https://github.com/examplecode/android-ui-test-runner&quot;&gt;https://github.com/examplecode/android-ui-test-runner&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float:left&quot; src=&quot;/images/UITestRnnner-TestSuite.png&quot; alt=&quot;测试套件列表&quot; title=&quot;测试套件列表&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/UITestRunner-testCase.png&quot; alt=&quot;测试用例列表&quot; title=&quot;测试用例列表&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;uitestrunner&quot;&gt;在你的项目中使用UITestRunner&lt;/h2&gt;
+
+&lt;h3 id=&quot;step1-uitestrunnereclise&quot;&gt;step1 导入UITestRunner到Eclise的工作空间&lt;/h3&gt;
+
+&lt;p&gt;UITestRunner需要和你要测试的项目在同一个workspace,首先我们需要把它导入到我们所在的workspace.&lt;/p&gt;
+
+&lt;p&gt;按照以下的步骤操作：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;File -&amp;gt; Import -&amp;gt; Existing Android Code Into WorkSpace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;step2--uitestrunner&quot;&gt;step2 在你的项目中设置依赖 UITestRunner&lt;/h3&gt;
+&lt;p&gt;UITestRunner 是以lib类型的工程存在，我们必须设置我们的项目依赖UITestRunner.
+按照以下步骤操作：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;选择你的项目 -&amp;gt; 选择Properties(右键菜单) -&amp;gt; 选择Android 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这时候你会看到下面这个界面,点击Add把UITestRunner添加进来。 &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Depend-UITestRunner.png&quot; alt=&quot;设置依赖UITestRunner&quot; /&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;step3-uitestrunner&quot;&gt;step3 添加UITestRunner的声明&lt;/h3&gt;
+
+&lt;p&gt;在你自己项目的AndroidManifest.xml中添加以下内容声明UITestActivity(测试用例的展示界面)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;com.mmbox.uitestrunner.UITestActivity&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;com.mmbox.uitestrunner.Main&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;android.intent.category.DEFAULT&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step4-&quot;&gt;step4 创建你自己的测试套件&lt;/h3&gt;
+
+&lt;p&gt;你可以根据不同的测试类型创建多个测试套件，创建测试套件很简单只需要创建一个Class从UITestSuite继承即可。建议我们创建一个package来存放所有的测试套件(不是必须只是为了清楚易于维护，包名可以自己定义), 如下图所示:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/TestSuite-Package.png&quot; alt=&quot;测试套件放置到一个统一的package下&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;测试套件的实现代码如下所示：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated constructor stub&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step6-&quot;&gt;step6 为已有的测试套件添加测试用例&lt;/h3&gt;
+
+&lt;p&gt;添加测试用例很简单，只需要在测试套件中增加一些以 “test” 开头的 public 方法即可，如以下代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated constructor stub&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testSayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello UITestRunner&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase1InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testCase1InTestSuite1 is runngin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase2InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testCase2InTestSuite1 is runngin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step5-&quot;&gt;step5 启动测试用例&lt;/h3&gt;
+
+&lt;p&gt;完成以上步骤就可以通过eclise安装项目到你的设备或模拟器中了，启动测试用例很简单只需要输入下面的命令即可.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;adb shell am start -a com.mmbox.uitestrunner.Main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一切正常的话你将会看到下面的界面:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/UITestRnnner-TestSuite.png&quot; alt=&quot;测试套件列表&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;view&quot;&gt;在测试用例中测试一个View的布局显示&lt;/h2&gt;
+
+&lt;p&gt;我们除了在测试用例测试一些简单的逻辑外，还有一个经常需要的场景就是想看看一个布局文件的实际显示效果，这时候我们没有必要创建一个新的Activity来显示你的View，只需要在测试用例中调用showTestView方法即可. 框架提供了两个方法 showView,showLayout，分别用于显示一个View实例和展示一个布局文件。&lt;/p&gt;
+
+&lt;h3 id=&quot;view-1&quot;&gt;显示一个view实例&lt;/h3&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;代码&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Click Me&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WRAP_CONTENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WRAP_CONTENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;showView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;展示效果&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/test_view.png&quot; alt=&quot;测试显示一个Button&quot; title=&quot;测试显示一个Button&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;显示一个布局文件&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;代码&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;showLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show_layout_demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;展示效果&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/test_layout.png&quot; alt=&quot;显示FrameLayout的布局测试&quot; title=&quot;显示FrameLayout的布局测试&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>一些非常棒的在线工具【绝对干货】</title>

@@ -9,6 +9,7 @@ http://examplecode.github.io/rss.xml
 http://examplecode.github.io/sitemap.txt
 http://examplecode.github.io/tags.html
 
+http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android
 http://examplecode.github.io/tools/2014/06/21/frequently-online-tools
 http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution
 http://examplecode.github.io/2014/06/15/hijekyll
