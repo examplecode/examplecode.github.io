@@ -4,7 +4,7 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-23T15:18:03+08:00</updated>
+ <updated>2014-06-23T15:31:54+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
@@ -155,6 +155,8 @@
    <updated>2014-06-21T00:00:00+08:00</updated>
    <id>http://examplecode.github.io/tools/2014/06/21/frequently-online-tools</id>
    <content type="html">
+&lt;p&gt;分享整理了一下自己常用的几个在线网站，绝对是强悍简单。谁有更好的欢迎推荐 ：）&lt;/p&gt;
+
 &lt;h3 id=&quot;markdown-&quot;&gt;MarkDown 编辑&lt;/h3&gt;
 
 &lt;p&gt;网址: &lt;a href=&quot;https://stackedit.io&quot;&gt;https://stackedit.io&lt;/a&gt;&lt;/p&gt;
