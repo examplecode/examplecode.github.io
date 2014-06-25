@@ -5,8 +5,8 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-25T08:54:15+08:00</lastBuildDate>
-        <pubDate>2014-06-25T08:54:15+08:00</pubDate>
+        <lastBuildDate>2014-06-25T08:58:40+08:00</lastBuildDate>
+        <pubDate>2014-06-25T08:58:40+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -164,11 +164,11 @@
 
 &lt;p&gt;搜集了大量的脚本和命令行及unix下常用技巧。如果你想使用很酷的脚本和命令提高工作效率，这个网址一定用得到。&lt;/p&gt;
 
-&lt;h3 id=&quot;asscii&quot;&gt;Asscii流程图绘制&lt;/h3&gt;
+&lt;h3 id=&quot;ascii&quot;&gt;Ascii流程图绘制&lt;/h3&gt;
 
 &lt;p&gt;网址: &lt;a href=&quot;http://www.asciiflow.com&quot;&gt;http://www.asciiflow.com/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;本人奉行极简主意，文档使用markdown,自然流程图也使用文本最好。这是一个强大的在线ASSCII图形绘制工具。&lt;/p&gt;
+&lt;p&gt;本人奉行极简主意，文档使用markdown,自然流程图也使用文本最好。这是一个强大的在线ASCII图形绘制工具。&lt;/p&gt;
 
 &lt;p&gt;下面是个demo&lt;/p&gt;
 
@@ -210,7 +210,7 @@
 
 &lt;h3 id=&quot;section-4&quot;&gt;程序员在线文档&lt;/h3&gt;
 
-&lt;p&gt;网址: http://devdocs.io/&lt;/p&gt;
+&lt;p&gt;网址: &lt;a href=&quot;http://devdocs.io/&quot;&gt;http://devdocs.io/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;提供了一站式的程序员文档，c/c++ ,ruby,python,js,html5,css,http 等在线文档应有尽有。感谢v友”ttph1oc” 的推荐。&lt;/p&gt;
 
