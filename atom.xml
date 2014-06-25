@@ -4,7 +4,7 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-06-25T19:09:54+08:00</updated>
+ <updated>2014-06-25T19:13:41+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
@@ -22,7 +22,7 @@
 
 &lt;p&gt;源码地址：&lt;a href=&quot;https://github.com/examplecode/mproxy&quot;&gt;https://github.com/examplecode/mproxy&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;mproxy&quot;&gt;一些关于mproxy的问题&lt;/h2&gt;
+&lt;h2 id=&quot;mproxy&quot;&gt;关于mproxy&lt;/h2&gt;
 
 &lt;h3 id=&quot;mproxy-&quot;&gt;mproxy 是什么？&lt;/h3&gt;
 
