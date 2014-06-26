@@ -5,8 +5,8 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-26T09:24:24+08:00</lastBuildDate>
-        <pubDate>2014-06-26T09:24:24+08:00</pubDate>
+        <lastBuildDate>2014-06-26T10:01:07+08:00</lastBuildDate>
+        <pubDate>2014-06-26T10:01:07+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -53,7 +53,7 @@
 
 &lt;h3 id=&quot;mproxy--4&quot;&gt;mproxy 的使用效果如何？&lt;/h3&gt;
 
-&lt;p&gt;mproxy刚刚开发完毕，实现简陋也没有经过大量测试。和成熟稳定的翻墙软件比还有一定差距，其主要目的也是用来学习和研究翻墙原理。目前经测试访问google,twitter,facebook,youtube等网站没有问题。&lt;/p&gt;
+&lt;p&gt;mproxy刚刚开发完毕，实现简陋也没有经过大量测试。和成熟稳定的翻墙软件比还有一定差距，其主要目的也是用来学习和研究翻墙原理,目前这个东东完全没有达到一个产品级的水平，如果你喜欢折腾就继续尝试一下当成玩具，否则就此打住把，免得你抱怨我发布一个垃圾的东西。目前经测试访问google,twitter,facebook,youtube等网站没有问题。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;关于测试服务器&lt;/h2&gt;
 
