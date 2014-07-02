@@ -5,10 +5,55 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-06-27T10:42:10+08:00</lastBuildDate>
-        <pubDate>2014-06-27T10:42:10+08:00</pubDate>
+        <lastBuildDate>2014-07-02T12:02:17+08:00</lastBuildDate>
+        <pubDate>2014-07-02T12:02:17+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>自己搭建的google搜索镜像服务</title>
+                <description>
+&lt;p&gt;基于我前几天发布的一个小工具&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation&quot;&gt;mproxy&lt;/a&gt;，做了一个免费的Google搜索镜像用来满足日常使用Google的需求，为了发挥VPS的更大效能,现分享出来供免费使用。&lt;/p&gt;
+
+&lt;p&gt;注：目前此教程只针对Chrome浏览器，其他浏览器的使用者请忽略此文，或自行想办法(原理上都是一样的)免费的镜像不知能够提供多长时间，有兴趣的话可以按照&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation&quot;&gt;mproxy&lt;/a&gt;的使用教程自行部署服务&lt;/p&gt;
+
+&lt;p&gt;应用原理主要是依赖浏览器的PAC(Proxy-Auto-Config)功能,在使用google的时候自动切换至mproxy提供的代理服务，如果想使用其他被墙的网站原理相同，只需要修改.pac文件就好了。设置简洁3步搞定，详情如下。&lt;/p&gt;
+
+&lt;h3 id=&quot;step1-mproxy&quot;&gt;step1 下载并编译mproxy&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;clone https://github.com/examplecode/mproxy
+cd mproxy
+gcc -o mproxy mproxy.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;step2-proxy&quot;&gt;step2 在命令行启动proxy&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;./mproxy -l 8081 -h free.mmbox.me -E -d
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;step-3-chrome-&quot;&gt;step 3 以命令行的方式启动Chrome 浏览器&lt;/h3&gt;
+
+&lt;p&gt;为了确保自动切换代理模式可以正常工作，请再测试之前先禁用(chrome-&amp;gt;偏好设置-&amp;gt;扩展程序)掉所有的代理管理插件，如proxySwitchSharp。 &lt;/p&gt;
+
+&lt;h4 id=&quot;mac-&quot;&gt;Mac 版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Applications/Google\ Chrome.app/Contents/MacOS
+./Google\ Chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;linux-&quot;&gt;linux 版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /path/of/chrome
+./chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在完成以上步骤后就可以畅通无阻的使用Google了，enjoy it ! :) &lt;/p&gt;
+
+</description>
+                <link>http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service</link>
+                <guid>http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service</guid>
+                <pubDate>2014-07-02T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>最小的http proxy c语言实现 - 支持翻墙</title>
@@ -58,7 +103,7 @@
 
 &lt;h3 id=&quot;mproxy--4&quot;&gt;mproxy 的使用效果如何？&lt;/h3&gt;
 
-&lt;p&gt;mproxy刚刚开发完毕，实现简陋也没有经过大量测试。和成熟稳定的翻墙软件比还有一定差距，其主要目的也是用来学习和研究翻墙原理,目前这个东东完全没有达到一个产品级的水平，如果你喜欢折腾就继续尝试一下当成玩具，否则就此打住把，免得你抱怨我发布一个垃圾的东西。目前经测试访问google,twitter,facebook,youtube等网站没有问题。&lt;/p&gt;
+&lt;p&gt;mproxy刚刚开发完毕，实现简陋也没有经过大量测试。和成熟稳定的翻墙软件比还有一定差距，其主要目的也是用来学习和研究翻墙原理,目前这个东东完全没有达到一个产品级的水平，如果你喜欢折腾就继续尝试一下当成玩具，否则就此打住吧，免得你抱怨我发布一个垃圾的东西。目前经测试访问google,twitter,facebook,youtube等网站没有问题。&lt;/p&gt;
 
 &lt;h3 id=&quot;mproxy--5&quot;&gt;mproxy 作为后台程序运行的时候如何查看程序输出？&lt;/h3&gt;
 
