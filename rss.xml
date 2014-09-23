@@ -5,10 +5,39 @@
         <description>Example Code - 程凯</description>
         <link>http://examplecode.github.io</link>
         <link>http://examplecode.github.io</link>
-        <lastBuildDate>2014-07-02T12:02:17+08:00</lastBuildDate>
-        <pubDate>2014-07-02T12:02:17+08:00</pubDate>
+        <lastBuildDate>2014-09-23T15:25:40+08:00</lastBuildDate>
+        <pubDate>2014-09-23T15:25:40+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>ubuntu下安装ruby rails环境</title>
+                <description>
+&lt;h2 id=&quot;step1-rvm&quot;&gt;step1 安装rvm&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt; curl -L https://get.rvm.io | bash -s stable
+ source ~/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;step2--ruby&quot;&gt;step2 安装 ruby&lt;/h2&gt;
+
+&lt;p&gt;选择当前最新的稳定版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rvm install 2.1.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;step3-rails&quot;&gt;step3 安装rails&lt;/h2&gt;
+
+&lt;p&gt;使用国内较近的镜像：替换为taobao镜像&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem source -r https://rubygems.org/
+gem source -a https://ruby.taobao.org
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</link>
+                <guid>http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</guid>
+                <pubDate>2014-09-23T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>自己搭建的google搜索镜像服务</title>
@@ -292,11 +321,11 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;搜集了大量的脚本和命令行及unix下常用技巧。如果你想使用很酷的脚本和命令提高工作效率，这个网址一定用得到。&lt;/p&gt;
 
-&lt;h3 id=&quot;ascii&quot;&gt;Ascii流程图绘制&lt;/h3&gt;
+&lt;h3 id=&quot;asscii&quot;&gt;Asscii流程图绘制&lt;/h3&gt;
 
 &lt;p&gt;网址: &lt;a href=&quot;http://www.asciiflow.com&quot;&gt;http://www.asciiflow.com/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;本人奉行极简主意，文档使用markdown,自然流程图也使用文本最好。这是一个强大的在线ASCII图形绘制工具。&lt;/p&gt;
+&lt;p&gt;本人奉行极简主意，文档使用markdown,自然流程图也使用文本最好。这是一个强大的在线ASSCII图形绘制工具。&lt;/p&gt;
 
 &lt;p&gt;下面是个demo&lt;/p&gt;
 
@@ -336,13 +365,7 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;腾讯提供的番茄工作法的即时小工具，不懂”番茄工作法”的去Google.&lt;/p&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;程序员在线文档&lt;/h3&gt;
-
-&lt;p&gt;网址: &lt;a href=&quot;http://devdocs.io/&quot;&gt;http://devdocs.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;提供了一站式的程序员文档，c/c++ ,ruby,python,js,html5,css,http 等在线文档应有尽有。感谢v友”ttph1oc” 的推荐。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;在线移动应用原型制作&lt;/h3&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;在线移动应用原型制作&lt;/h3&gt;
 
 &lt;p&gt;网址: &lt;a href=&quot;https://www.flinto.com/&quot;&gt;https://www.flinto.com/&lt;/a&gt;&lt;/p&gt;
 
