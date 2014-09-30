@@ -4,13 +4,53 @@
  <title>Example Code</title>
  <link href="http://examplecode.github.io/" rel="self"/>
  <link href="http://examplecode.github.io"/>
- <updated>2014-09-23T15:35:22+08:00</updated>
+ <updated>2014-09-30T11:39:42+08:00</updated>
  <id>http://examplecode.github.io</id>
  <author>
    <name>程凯</name>
    <email>chengkai.me@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>在 mac 10.9 下安装 gollum </title>
+   <link href="http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109"/>
+   <updated>2014-09-26T00:00:00+08:00</updated>
+   <id>http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109</id>
+   <content type="html">
+&lt;p&gt;gollum 是github的使用的一个基于markdown的 wiki系统 纯文件不需要数据库非常好用,&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;基本的环境&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Mac 10.9 &lt;/li&gt;
+  &lt;li&gt;homebrew 0.9&lt;/li&gt;
+  &lt;li&gt;ruby 2.0&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;libiconv&quot;&gt;安装 libiconv&lt;/h2&gt;
+
+&lt;p&gt;在安装的时候会出现找不到libiconv所以需要安装
+基本环境 homebrew 0.9&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install libxml2 libxslt
+brew link libxml2 libxslt --force
+wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+tar xvfz libiconv-1.13.1.tar.gz
+cd libiconv-1.13.1
+./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;gollum&quot;&gt;安装 gollum&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gollum/gollum
+gem install gollum
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>ubuntu下安装ruby rails环境</title>
