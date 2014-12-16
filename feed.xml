@@ -49,8 +49,8 @@ gollum
 
 </description>
         <pubDate>Fri, 26 Sep 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109.html</guid>
+        <link>http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109</link>
+        <guid isPermaLink="true">http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109</guid>
       </item>
     
       <item>
@@ -77,15 +77,15 @@ gem source -a https://ruby.taobao.org
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu.html</guid>
+        <link>http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</link>
+        <guid isPermaLink="true">http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</guid>
       </item>
     
       <item>
         <title>自己搭建的google搜索镜像服务</title>
-        <description>&lt;p&gt;基于我前几天发布的一个小工具&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation.html&quot;&gt;mproxy&lt;/a&gt;，做了一个免费的Google搜索镜像用来满足日常使用Google的需求，为了发挥VPS的更大效能,现分享出来供免费使用。&lt;/p&gt;
+        <description>&lt;p&gt;基于我前几天发布的一个小工具&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation&quot;&gt;mproxy&lt;/a&gt;，做了一个免费的Google搜索镜像用来满足日常使用Google的需求，为了发挥VPS的更大效能,现分享出来供免费使用。&lt;/p&gt;
 
-&lt;p&gt;注：目前此教程只针对Chrome浏览器，其他浏览器的使用者请忽略此文，或自行想办法(原理上都是一样的)免费的镜像不知能够提供多长时间，有兴趣的话可以按照&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation.html&quot;&gt;mproxy&lt;/a&gt;的使用教程自行部署服务&lt;/p&gt;
+&lt;p&gt;注：目前此教程只针对Chrome浏览器，其他浏览器的使用者请忽略此文，或自行想办法(原理上都是一样的)免费的镜像不知能够提供多长时间，有兴趣的话可以按照&lt;a href=&quot;/2014/06/25/minimal-http-proxy-c-language-implementation&quot;&gt;mproxy&lt;/a&gt;的使用教程自行部署服务&lt;/p&gt;
 
 &lt;p&gt;应用原理主要是依赖浏览器的PAC(Proxy-Auto-Config)功能,在使用google的时候自动切换至mproxy提供的代理服务，如果想使用其他被墙的网站原理相同，只需要修改.pac文件就好了。设置简洁3步搞定，详情如下。&lt;/p&gt;
 
@@ -121,13 +121,13 @@ gcc -o mproxy mproxy.c
 
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service.html</guid>
+        <link>http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service</link>
+        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/07/02/build-your-own-google-search-mirrors-service</guid>
       </item>
     
       <item>
         <title>最小的http proxy c语言实现 - 支持翻墙</title>
-        <description>&lt;p&gt;前几天发布了一个&lt;a href=&quot;/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html&quot;&gt;防止GFWDNS污染的小工具&lt;/a&gt; 出乎意料的有热心网友很快跟进基于类似原理开发出了更好用的工具，详情点击&lt;a href=&quot;http://www.v2ex.com/t/118913#reply123&quot;&gt;这里&lt;/a&gt;。于是我又心血来潮写了这么一个小东西，希望能够起到抛砖引玉的作用。&lt;/p&gt;
+        <description>&lt;p&gt;前几天发布了一个&lt;a href=&quot;/tools/2014/06/20/the-tools-prevent-dns-cache-pollution&quot;&gt;防止GFWDNS污染的小工具&lt;/a&gt; 出乎意料的有热心网友很快跟进基于类似原理开发出了更好用的工具，详情点击&lt;a href=&quot;http://www.v2ex.com/t/118913#reply123&quot;&gt;这里&lt;/a&gt;。于是我又心血来潮写了这么一个小东西，希望能够起到抛砖引玉的作用。&lt;/p&gt;
 
 &lt;p&gt;源码地址：&lt;a href=&quot;https://github.com/examplecode/mproxy&quot;&gt;https://github.com/examplecode/mproxy&lt;/a&gt;&lt;/p&gt;
 
@@ -203,8 +203,8 @@ gcc -o mproxy mproxy.c
 
 </description>
         <pubDate>Wed, 25 Jun 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/2014/06/25/minimal-http-proxy-c-language-implementation.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/2014/06/25/minimal-http-proxy-c-language-implementation.html</guid>
+        <link>http://examplecode.github.io/2014/06/25/minimal-http-proxy-c-language-implementation</link>
+        <guid isPermaLink="true">http://examplecode.github.io/2014/06/25/minimal-http-proxy-c-language-implementation</guid>
       </item>
     
       <item>
@@ -339,8 +339,8 @@ gcc -o mproxy mproxy.c
 
 </description>
         <pubDate>Mon, 23 Jun 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android.html</guid>
+        <link>http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android</link>
+        <guid isPermaLink="true">http://examplecode.github.io/android/2014/06/23/ui-test-runner-for-android</guid>
       </item>
     
       <item>
@@ -411,8 +411,8 @@ gcc -o mproxy mproxy.c
 
 </description>
         <pubDate>Sat, 21 Jun 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/tools/2014/06/21/frequently-online-tools.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/06/21/frequently-online-tools.html</guid>
+        <link>http://examplecode.github.io/tools/2014/06/21/frequently-online-tools</link>
+        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/06/21/frequently-online-tools</guid>
       </item>
     
       <item>
@@ -472,8 +472,8 @@ gcc -o mproxy mproxy.c
 
 </description>
         <pubDate>Fri, 20 Jun 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html</link>
-        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html</guid>
+        <link>http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution</link>
+        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/06/20/the-tools-prevent-dns-cache-pollution</guid>
       </item>
     
   </channel>
