@@ -9,11 +9,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  
+  <meta name="description" content="">
 
   <title>
     
-      分类 &middot; Example Code
+      ubuntu下安装ruby rails环境 &middot; Example Code
     
   </title>
 
@@ -70,7 +70,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/categories.html">分类</a>
+            <a class="sidebar-nav-item" href="/categories.html">分类</a>
           
         
       
@@ -101,80 +101,64 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">分类</h1>
-  <ul class="tag_box inline">
-  
-  
+      <div class="post">
+  <h1 class="post-title">ubuntu下安装ruby rails环境</h1>
+  <span class="post-date">23 Sep 2014</span>
+  <h2 id="step1-rvm">step1 安装rvm</h2>
 
+<pre><code> curl -L https://get.rvm.io | bash -s stable
+ source ~/.rvm/scripts/rvm
+</code></pre>
 
-  
-     
-    	<li><a href="#tools-ref">
-    		tools <span>3</span>
-    	</a></li>
-     
-    	<li><a href="#android-ref">
-    		android <span>1</span>
-    	</a></li>
+<h2 id="step2--ruby">step2 安装 ruby</h2>
+
+<p>选择当前最新的稳定版本</p>
+
+<pre><code>rvm install 2.1.2
+</code></pre>
+
+<h2 id="step3-rails">step3 安装rails</h2>
+
+<p>使用国内较近的镜像：替换为taobao镜像</p>
+
+<pre><code>gem source -r https://rubygems.org/
+gem source -a https://ruby.taobao.org
+</code></pre>
+
+</div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
     
-  
-
-
-</ul>
-
-
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
+      <li>
+        <h3>
+          <a href="/2014/09/26/install-gollum-in-mac-109.html">
+            在 mac 10.9 下安装 gollum 
+            <small>26 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
+      <li>
+        <h3>
+          <a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">
+            自己搭建的google搜索镜像服务
+            <small>02 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
     
-      
-      <li><a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">自己搭建的google搜索镜像服务</a></li>
-      
+      <li>
+        <h3>
+          <a href="/2014/06/25/minimal-http-proxy-c-language-implementation.html">
+            最小的http proxy c语言实现 - 支持翻墙
+            <small>25 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/21/frequently-online-tools.html">一些非常棒的在线工具【绝对干货】</a></li>
-      
-    
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html">GFW DNS污染原理 - 防止DNS污染的小工具</a></li>
-      
-    
-  
-
-  
-
-
   </ul>
- 
-  <h2 id="android-ref">android</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/android/2014/06/23/ui-test-runner-for-android.html">android下针对UI的单元测试工具</a></li>
-      
-    
-  
-
-  
-
-
-  </ul>
-
 </div>
 
     </div>

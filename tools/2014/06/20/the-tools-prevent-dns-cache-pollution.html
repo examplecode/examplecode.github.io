@@ -9,11 +9,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  
+  <meta name="description" content="一个小工具用于返回被GFW污染的真实域名">
 
   <title>
     
-      分类 &middot; Example Code
+      GFW DNS污染原理 - 防止DNS污染的小工具 &middot; Example Code
     
   </title>
 
@@ -70,7 +70,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/categories.html">分类</a>
+            <a class="sidebar-nav-item" href="/categories.html">分类</a>
           
         
       
@@ -101,80 +101,97 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">分类</h1>
-  <ul class="tag_box inline">
-  
-  
+      <div class="post">
+  <h1 class="post-title">GFW DNS污染原理 - 防止DNS污染的小工具</h1>
+  <span class="post-date">20 Jun 2014</span>
+  <p>以前写的小工具，最近整理代码，再这里公布出来。这个小工具用于获取被gfw dns 污染域名的真实ip地址，通常可以用于获取twitter,youtube,facebook等网址的真实ip地址。如果你的某些程序需要绕过GFW DNS污染也许这些代码片断会用的上，分别提供了c语言和java的实现版本。</p>
+
+<p>其工作原理大致如下：</p>
+
+<p>GFW对域名进行DNS污染的原理实际上是在正常的DNS服务器返回请求包之前，返回请求者错误的IP地址。而GFW返回的这些错误地址也是有规律可循，根据这个原理我们就不难写出对抗GFW DNS污染的程序了。所以我提供的小程序核心内容就有两点：</p>
+
+<ol>
+  <li>提供GFW返回IP的一个黑名单列表。</li>
+  <li>如果服务端返回的DNS响应IP地址在黑名单列表中，则进行忽略并尝试等待真实的ip地址返回。</li>
+</ol>
+
+<p><a href="https://github.com/examplecode/gfw_dns_resolver">前往 github 源码地址</a></p>
+
+<h2 id="c-">C 语言版本</h2>
+
+<h3 id="section">编译</h3>
+
+<pre><code>gcc -o gfw_dns_resolver  gfw_dns_resolver.c 
+</code></pre>
+
+<p>编译输出调试信息版本</p>
+
+<pre><code>gcc -o gfw_dns_resolver -DDEBUG gfw_dns_resolver.c 
+</code></pre>
+
+<h3 id="section-1">运行示例</h3>
+
+<pre><code>./gfw_dns_resolver www.twitter.com
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>The real ip is: 199.59.149.230
+</code></pre>
+
+<h2 id="java-">JAVA 版本</h2>
+
+<h3 id="section-2">编译</h3>
+
+<pre><code>javac GFWDnsResolver.java
+</code></pre>
+
+<h3 id="section-3">运行示例</h3>
+<pre><code>java GFWDnsResolver www.youtube.com
+</code></pre>
+
+<p>输出：</p>
+
+<pre><code>host:www.youtube.com The real ip is:173.194.72.102
+</code></pre>
+
+<p><a href="https://github.com/examplecode/gfw_dns_resolver">前往 github 源码地址</a></p>
 
 
-  
-     
-    	<li><a href="#tools-ref">
-    		tools <span>3</span>
-    	</a></li>
-     
-    	<li><a href="#android-ref">
-    		android <span>1</span>
-    	</a></li>
+</div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
     
-  
-
-
-</ul>
-
-
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
+      <li>
+        <h3>
+          <a href="/2014/09/26/install-gollum-in-mac-109.html">
+            在 mac 10.9 下安装 gollum 
+            <small>26 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
+      <li>
+        <h3>
+          <a href="/2014/09/23/install-ruby-rails-on-ubuntu.html">
+            ubuntu下安装ruby rails环境
+            <small>23 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-      
-      <li><a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">自己搭建的google搜索镜像服务</a></li>
-      
+      <li>
+        <h3>
+          <a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">
+            自己搭建的google搜索镜像服务
+            <small>02 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/21/frequently-online-tools.html">一些非常棒的在线工具【绝对干货】</a></li>
-      
-    
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html">GFW DNS污染原理 - 防止DNS污染的小工具</a></li>
-      
-    
-  
-
-  
-
-
   </ul>
- 
-  <h2 id="android-ref">android</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/android/2014/06/23/ui-test-runner-for-android.html">android下针对UI的单元测试工具</a></li>
-      
-    
-  
-
-  
-
-
-  </ul>
-
 </div>
 
     </div>

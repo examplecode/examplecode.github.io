@@ -9,11 +9,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  
+  <meta name="description" content="免费的Google搜索镜像">
 
   <title>
     
-      分类 &middot; Example Code
+      自己搭建的google搜索镜像服务 &middot; Example Code
     
   </title>
 
@@ -70,7 +70,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/categories.html">分类</a>
+            <a class="sidebar-nav-item" href="/categories.html">分类</a>
           
         
       
@@ -101,80 +101,80 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">分类</h1>
-  <ul class="tag_box inline">
-  
-  
+      <div class="post">
+  <h1 class="post-title">自己搭建的google搜索镜像服务</h1>
+  <span class="post-date">02 Jul 2014</span>
+  <p>基于我前几天发布的一个小工具<a href="/2014/06/25/minimal-http-proxy-c-language-implementation.html">mproxy</a>，做了一个免费的Google搜索镜像用来满足日常使用Google的需求，为了发挥VPS的更大效能,现分享出来供免费使用。</p>
+
+<p>注：目前此教程只针对Chrome浏览器，其他浏览器的使用者请忽略此文，或自行想办法(原理上都是一样的)免费的镜像不知能够提供多长时间，有兴趣的话可以按照<a href="/2014/06/25/minimal-http-proxy-c-language-implementation.html">mproxy</a>的使用教程自行部署服务</p>
+
+<p>应用原理主要是依赖浏览器的PAC(Proxy-Auto-Config)功能,在使用google的时候自动切换至mproxy提供的代理服务，如果想使用其他被墙的网站原理相同，只需要修改.pac文件就好了。设置简洁3步搞定，详情如下。</p>
+
+<h3 id="step1-mproxy">step1 下载并编译mproxy</h3>
+
+<pre><code>clone https://github.com/examplecode/mproxy
+cd mproxy
+gcc -o mproxy mproxy.c
+</code></pre>
+
+<h3 id="step2-proxy">step2 在命令行启动proxy</h3>
+
+<pre><code>./mproxy -l 8081 -h free.mmbox.me -E -d
+</code></pre>
+
+<h3 id="step-3-chrome-">step 3 以命令行的方式启动Chrome 浏览器</h3>
+
+<p>为了确保自动切换代理模式可以正常工作，请再测试之前先禁用(chrome-&gt;偏好设置-&gt;扩展程序)掉所有的代理管理插件，如proxySwitchSharp。 </p>
+
+<h4 id="mac-">Mac 版本</h4>
+
+<pre><code>cd /Applications/Google\ Chrome.app/Contents/MacOS
+./Google\ Chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+</code></pre>
+
+<h4 id="linux-">linux 版本</h4>
+
+<pre><code>cd /path/of/chrome
+./chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+</code></pre>
+
+<p>在完成以上步骤后就可以畅通无阻的使用Google了，enjoy it ! :) </p>
 
 
-  
-     
-    	<li><a href="#tools-ref">
-    		tools <span>3</span>
-    	</a></li>
-     
-    	<li><a href="#android-ref">
-    		android <span>1</span>
-    	</a></li>
+</div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
     
-  
-
-
-</ul>
-
-
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
+      <li>
+        <h3>
+          <a href="/2014/09/26/install-gollum-in-mac-109.html">
+            在 mac 10.9 下安装 gollum 
+            <small>26 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
+      <li>
+        <h3>
+          <a href="/2014/09/23/install-ruby-rails-on-ubuntu.html">
+            ubuntu下安装ruby rails环境
+            <small>23 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-      
-      <li><a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">自己搭建的google搜索镜像服务</a></li>
-      
+      <li>
+        <h3>
+          <a href="/2014/06/25/minimal-http-proxy-c-language-implementation.html">
+            最小的http proxy c语言实现 - 支持翻墙
+            <small>25 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/21/frequently-online-tools.html">一些非常棒的在线工具【绝对干货】</a></li>
-      
-    
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html">GFW DNS污染原理 - 防止DNS污染的小工具</a></li>
-      
-    
-  
-
-  
-
-
   </ul>
- 
-  <h2 id="android-ref">android</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/android/2014/06/23/ui-test-runner-for-android.html">android下针对UI的单元测试工具</a></li>
-      
-    
-  
-
-  
-
-
-  </ul>
-
 </div>
 
     </div>

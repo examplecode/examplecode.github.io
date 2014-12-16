@@ -9,11 +9,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  
+  <meta name="description" content="">
 
   <title>
     
-      分类 &middot; Example Code
+      在 mac 10.9 下安装 gollum  &middot; Example Code
     
   </title>
 
@@ -70,7 +70,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/categories.html">分类</a>
+            <a class="sidebar-nav-item" href="/categories.html">分类</a>
           
         
       
@@ -101,80 +101,83 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">分类</h1>
-  <ul class="tag_box inline">
-  
-  
+      <div class="post">
+  <h1 class="post-title">在 mac 10.9 下安装 gollum </h1>
+  <span class="post-date">26 Sep 2014</span>
+  <p>gollum 是github的使用的一个基于markdown的 wiki系统,最重要的是这个wiki非常符合极简主义精神，不需要数据 markdown + git 就可以搞定非常方便。</p>
+
+<h2 id="section">基本的环境</h2>
+
+<ol>
+  <li>Mac 10.9 </li>
+  <li>homebrew 0.9</li>
+  <li>ruby 2.0</li>
+</ol>
+
+<h2 id="libiconv">安装 libiconv</h2>
+
+<p>在安装的时候会出现找不到libiconv所以需要安装
+基本环境 homebrew 0.9</p>
+
+<pre><code>brew install libxml2 libxslt
+brew link libxml2 libxslt --force
+wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+tar xvfz libiconv-1.13.1.tar.gz
+cd libiconv-1.13.1
+./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+make
+sudo make install
+</code></pre>
+
+<h2 id="gollum">安装 gollum</h2>
+
+<pre><code>git clone https://github.com/gollum/gollum
+gem install gollum
+</code></pre>
+
+<h2 id="wiki">创建自己的wiki系统</h2>
+
+<pre><code>mkdir wiki
+cd wiki
+git init
+gollum
+</code></pre>
 
 
-  
-     
-    	<li><a href="#tools-ref">
-    		tools <span>3</span>
-    	</a></li>
-     
-    	<li><a href="#android-ref">
-    		android <span>1</span>
-    	</a></li>
+</div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
     
-  
-
-
-</ul>
-
-
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
+      <li>
+        <h3>
+          <a href="/2014/09/23/install-ruby-rails-on-ubuntu.html">
+            ubuntu下安装ruby rails环境
+            <small>23 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
+      <li>
+        <h3>
+          <a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">
+            自己搭建的google搜索镜像服务
+            <small>02 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
     
-      
-      <li><a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service.html">自己搭建的google搜索镜像服务</a></li>
-      
+      <li>
+        <h3>
+          <a href="/2014/06/25/minimal-http-proxy-c-language-implementation.html">
+            最小的http proxy c语言实现 - 支持翻墙
+            <small>25 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
     
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/21/frequently-online-tools.html">一些非常棒的在线工具【绝对干货】</a></li>
-      
-    
-  
-
-  
-    
-      
-      <li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution.html">GFW DNS污染原理 - 防止DNS污染的小工具</a></li>
-      
-    
-  
-
-  
-
-
   </ul>
- 
-  <h2 id="android-ref">android</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/android/2014/06/23/ui-test-runner-for-android.html">android下针对UI的单元测试工具</a></li>
-      
-    
-  
-
-  
-
-
-  </ul>
-
 </div>
 
     </div>
