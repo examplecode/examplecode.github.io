@@ -5,6 +5,7 @@
 /feed.xml
 /index.html
 /sitemap.txt
+/tags.html
 
 /2014/09/26/install-gollum-in-mac-109.html
 /2014/09/23/install-ruby-rails-on-ubuntu.html
