@@ -138,7 +138,7 @@ gcc -o mproxy mproxy.c
 
 <h3 id="step2-proxy">step2 在命令行启动proxy</h3>
 
-<pre><code>./mproxy -l 8081 -h free.mmbox.me -E -d
+<pre><code>./mproxy -l 8081 -h m.mmbox.me -E -d
 </code></pre>
 
 <h3 id="step-3-chrome-">step 3 以命令行的方式启动Chrome 浏览器</h3>
@@ -148,13 +148,13 @@ gcc -o mproxy mproxy.c
 <h4 id="mac-">Mac 版本</h4>
 
 <pre><code>cd /Applications/Google\ Chrome.app/Contents/MacOS
-./Google\ Chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+./Google\ Chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 </code></pre>
 
 <h4 id="linux-">linux 版本</h4>
 
 <pre><code>cd /path/of/chrome
-./chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+./chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 </code></pre>
 
 <p>在完成以上步骤后就可以畅通无阻的使用Google了，enjoy it ! :) </p>
@@ -177,7 +177,7 @@ gcc -o mproxy mproxy.c
     
       <li>
         <h3>
-          <a href="/2014/09/23/install-ruby-rails-on-ubuntu">
+          <a href="/devopt/2014/09/23/install-ruby-rails-on-ubuntu">
             ubuntu下安装ruby rails环境
             <small>23 Sep 2014</small>
           </a>
@@ -195,6 +195,32 @@ gcc -o mproxy mproxy.c
     
   </ul>
 </div>
+
+<div>
+ <!-- 多说评论框 start -->
+	<!-- Duoshuo Comment BEGIN -->
+    <div id="comments">
+        <div class="ds-thread" data-thread-key="/tools/2014/07/02/build-your-own-google-search-mirrors-service"  data-title="自己搭建的google搜索镜像服务 - Example Code"></div>
+    </div>
+<!-- Duoshuo Comment END -->
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"examplecode"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>
+
 
     </div>
 

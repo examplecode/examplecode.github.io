@@ -8,7 +8,7 @@
 /tags.html
 
 /2014/09/26/install-gollum-in-mac-109
-/2014/09/23/install-ruby-rails-on-ubuntu
+/devopt/2014/09/23/install-ruby-rails-on-ubuntu
 /tools/2014/07/02/build-your-own-google-search-mirrors-service
 /2014/06/25/minimal-http-proxy-c-language-implementation
 /android/2014/06/23/ui-test-runner-for-android

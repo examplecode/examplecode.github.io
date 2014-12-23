@@ -82,8 +82,8 @@ gem source -a https://ruby.taobao.org
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</link>
-        <guid isPermaLink="true">http://examplecode.github.io/2014/09/23/install-ruby-rails-on-ubuntu</guid>
+        <link>http://examplecode.github.io/devopt/2014/09/23/install-ruby-rails-on-ubuntu</link>
+        <guid isPermaLink="true">http://examplecode.github.io/devopt/2014/09/23/install-ruby-rails-on-ubuntu</guid>
       </item>
     
       <item>
@@ -103,7 +103,7 @@ gcc -o mproxy mproxy.c
 
 &lt;h3 id=&quot;step2-proxy&quot;&gt;step2 在命令行启动proxy&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;./mproxy -l 8081 -h free.mmbox.me -E -d
+&lt;pre&gt;&lt;code&gt;./mproxy -l 8081 -h m.mmbox.me -E -d
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;step-3-chrome-&quot;&gt;step 3 以命令行的方式启动Chrome 浏览器&lt;/h3&gt;
@@ -113,13 +113,13 @@ gcc -o mproxy mproxy.c
 &lt;h4 id=&quot;mac-&quot;&gt;Mac 版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;cd /Applications/Google\ Chrome.app/Contents/MacOS
-./Google\ Chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+./Google\ Chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&quot;linux-&quot;&gt;linux 版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;cd /path/of/chrome
-./chrome --proxy-pac-url=http://free.mmbox.me/mproxy.pac
+./chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在完成以上步骤后就可以畅通无阻的使用Google了，enjoy it ! :) &lt;/p&gt;
