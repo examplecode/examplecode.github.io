@@ -7,8 +7,8 @@
     <atom:link href="http://examplecode.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>在 mac 10.9 下安装 gollum </title>
-        <description>&lt;p&gt;gollum 是github的使用的一个基于markdown的 wiki系统。 最重要的是gollum直接和git集成不需要数据库，你可以选择在Web页面撰写文档，也可以用你喜欢的markdown工具编辑文档在命令行进行提交。 “markdown+git = wiki”  这对程序员来讲绝对是最棒的选择。  &lt;/p&gt;
+        <title>markdown + git 最适合程序员的wiki系统</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/gollum/gollum&quot;&gt;gollum&lt;/a&gt; 是github的使用的一个基于markdown的 wiki系统。 最重要的是gollum直接和git集成不需要数据库，你可以选择在Web页面撰写文档，也可以用你喜欢的markdown工具编辑文档在命令行进行提交。 “markdown+git = wiki”  这对程序员来讲绝对是最棒的选择。  &lt;/p&gt;
 
 &lt;p&gt;Gollum wiki 的截图如下&lt;/p&gt;
 
@@ -18,16 +18,21 @@
 
 &lt;h2 id=&quot;section&quot;&gt;基本的环境&lt;/h2&gt;
 
+&lt;p&gt;在安装之前，假定我们已经拥有了mac 下的包管理工具 homebrew 及 ruby 运行环境。我当前的工作环境如下:&lt;/p&gt;
+
 &lt;ol&gt;
   &lt;li&gt;Mac 10.9 &lt;/li&gt;
   &lt;li&gt;homebrew 0.9&lt;/li&gt;
   &lt;li&gt;ruby 2.0&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;libiconv&quot;&gt;安装 libiconv&lt;/h2&gt;
+&lt;h2 id=&quot;gollum&quot;&gt;安装 Gollum&lt;/h2&gt;
 
-&lt;p&gt;在安装的时候会出现找不到libiconv所以需要安装
-基本环境 homebrew 0.9&lt;/p&gt;
+&lt;p&gt;我们可以选择通过二进制或者源码的方式进行安装。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;二进制安装&lt;/h3&gt;
+
+&lt;p&gt;在安装的时候会出现找不到libiconv所以需要安装下面的依赖库&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;brew install libxml2 libxslt
 brew link libxml2 libxslt --force
@@ -39,13 +44,26 @@ make
 sudo make install
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;gollum&quot;&gt;安装 gollum&lt;/h2&gt;
+&lt;p&gt;通过Gem安装 gollum&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[sudo] gem install gollum
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;源码安装&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/gollum/gollum
-gem install gollum
+cd gollum
+bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装成功后尝试着在终端输入下面的命令，如果能够正常显示版本号则说明安装成功.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gollum --v
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;wiki&quot;&gt;创建自己的wiki系统&lt;/h2&gt;
+
+&lt;p&gt;接下来我们就可以建立自己的wiki系统了，建立一个名字为”wiki”的目录使用git进行管理。进入到wiki目录，在wiki目录下启动gollum&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;mkdir wiki
 cd wiki
@@ -53,12 +71,22 @@ git init
 gollum
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;接下就可以在浏览器中访问了 http://localhost:4567/Home&lt;/p&gt;
+&lt;p&gt;显示如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[2015-01-21 14:03:45] INFO  WEBrick 1.3.1
+[2015-01-21 14:03:45] INFO  ruby 2.0.0 (2013-05-14) [x86_64-darwin12.4.1]
+== Sinatra/1.4.5 has taken the stage on 4567 for development with backup from WEBrick
+[2015-01-21 14:03:45] INFO  WEBrick::HTTPServer#start: pid=17699 port=4567
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下就可以在浏览器中访问了 http://localhost:4567/&lt;/p&gt;
+
+&lt;p&gt;创建wiki文档可以选择在全部Web界面进行操作，也可以选择在终端命令行进行提交管理markdown文件，在浏览器中进行查看。&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 26 Sep 2014 00:00:00 +0800</pubDate>
-        <link>http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109</link>
-        <guid isPermaLink="true">http://examplecode.github.io/2014/09/26/install-gollum-in-mac-109</guid>
+        <link>http://examplecode.github.io/tools/2014/09/26/install-gollum-in-mac-109</link>
+        <guid isPermaLink="true">http://examplecode.github.io/tools/2014/09/26/install-gollum-in-mac-109</guid>
       </item>
     
       <item>
@@ -428,15 +456,25 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;使用图片快速生成移动应用的原型，设计师和产品经理绝对不要错过。在线制作，只要上传几张设计效果图随便拖拽几下，就可以部署到手机上查看逼真的交互效果（遗憾的是此网站不是完全免费，注册后免费30天的体验）。&lt;/p&gt;
 
+&lt;h3 id=&quot;section-5&quot;&gt;管理搜藏&lt;/h3&gt;
+
+&lt;p&gt;下面两个网址程序员不要错过，用来管理github上的start.&lt;/p&gt;
+
+&lt;p&gt;网址: &lt;a href=&quot;http://gitconstellation.com&quot;&gt;http://gitconstellation.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;网址:  &lt;a href=&quot;https://app.astralapp.com&quot;&gt;https://app.astralapp.com&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;svg&quot;&gt;在线SVG编辑工具&lt;/h3&gt;
 
 &lt;p&gt;网址： &lt;a href=&quot;http://editor.method.ac/&quot;&gt;http://editor.method.ac/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;很多图形处理工具不内建支持 .svg文件 ，我想把矢量图导出为指定规格的png文件这个在线工具帮了大忙&lt;/p&gt;
 
-&lt;h3 id=&quot;tinypng&quot;&gt;tinypng&lt;/h3&gt;
+&lt;h3 id=&quot;tinypng-&quot;&gt;tinypng 图片压缩&lt;/h3&gt;
 
-&lt;p&gt;https://tinypng.com/&lt;/p&gt;
+&lt;p&gt;这是一个用于压缩png图片的在线工具，非常适合移动应用开发人员和前端开发人员对图片资源优化。可以在不太损失显示效果的情况下能够把图片的尺寸减少 70%。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tinypng.com/&quot;&gt;https://tinypng.com/&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 21 Jun 2014 00:00:00 +0800</pubDate>
