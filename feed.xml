@@ -2,13 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Example Code</title>
-    <description>自由懒散的程序员一枚，因为懒，所以喜欢极简主义，憎恨一切形式化的东西。不喜欢写BLOG，直到遇见了Jekyll，让我感到写文章有写代码的感觉</description>
+    <description>自由懒散的程序员一枚，因为懒，所以喜欢极简主义，憎恨一切形式化的东西。不喜欢写BLOG，遇见了Jekyll，发现Blog也像写代码的方式一样来写.</description>
     <link>http://examplecode.github.io/</link>
     <atom:link href="http://examplecode.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>在 mac 10.9 下安装 gollum </title>
-        <description>&lt;p&gt;gollum 是github的使用的一个基于markdown的 wiki系统,最重要的是这个wiki非常符合极简主义精神，不需要数据 markdown + git 就可以搞定非常方便。&lt;/p&gt;
+        <description>&lt;p&gt;gollum 是github的使用的一个基于markdown的 wiki系统。 最重要的是gollum直接和git集成不需要数据库，你可以选择在Web页面撰写文档，也可以用你喜欢的markdown工具编辑文档在命令行进行提交。 “markdown+git = wiki”  这对程序员来讲绝对是最棒的选择。  &lt;/p&gt;
+
+&lt;p&gt;Gollum wiki 的截图如下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/gollum-screenshot.png&quot; alt=&quot;gollum截图&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mac下安装的适合遇到了一些小问题，所以在这里记录一下安装过程 。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;基本的环境&lt;/h2&gt;
 
@@ -46,6 +52,8 @@ cd wiki
 git init
 gollum
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下就可以在浏览器中访问了 http://localhost:4567/Home&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 26 Sep 2014 00:00:00 +0800</pubDate>
@@ -364,6 +372,12 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;搜集了大量的脚本和命令行及unix下常用技巧。如果你想使用很酷的脚本和命令提高工作效率，这个网址一定用得到。&lt;/p&gt;
 
+&lt;h3 id=&quot;android&quot;&gt;在线制作android应用图标&lt;/h3&gt;
+
+&lt;p&gt;这是一个非常棒的在线处理android图标的一个工具，强烈推荐 ！完全按照android的设计规范，输出不同规格的图标资源。同时还提供了很多现成的矢量图资源，对于缺少设计的android程序员真是一大福利。我做的浏览器产品完全依赖于这个工具实现大家可以看看实际效果 &lt;a href=&quot;http://xbrowser.me&quot;&gt;http://xbrowser.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;http://romannurik.github.io/AndroidAssetStudio/index.html&lt;/p&gt;
+
 &lt;h3 id=&quot;asscii&quot;&gt;Asscii流程图绘制&lt;/h3&gt;
 
 &lt;p&gt;网址: &lt;a href=&quot;http://www.asciiflow.com&quot;&gt;http://www.asciiflow.com/&lt;/a&gt;&lt;/p&gt;
@@ -413,6 +427,16 @@ gcc -o mproxy mproxy.c
 &lt;p&gt;网址: &lt;a href=&quot;https://www.flinto.com/&quot;&gt;https://www.flinto.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;使用图片快速生成移动应用的原型，设计师和产品经理绝对不要错过。在线制作，只要上传几张设计效果图随便拖拽几下，就可以部署到手机上查看逼真的交互效果（遗憾的是此网站不是完全免费，注册后免费30天的体验）。&lt;/p&gt;
+
+&lt;h3 id=&quot;svg&quot;&gt;在线SVG编辑工具&lt;/h3&gt;
+
+&lt;p&gt;网址： &lt;a href=&quot;http://editor.method.ac/&quot;&gt;http://editor.method.ac/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;很多图形处理工具不内建支持 .svg文件 ，我想把矢量图导出为指定规格的png文件这个在线工具帮了大忙&lt;/p&gt;
+
+&lt;h3 id=&quot;tinypng&quot;&gt;tinypng&lt;/h3&gt;
+
+&lt;p&gt;https://tinypng.com/&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 21 Jun 2014 00:00:00 +0800</pubDate>
