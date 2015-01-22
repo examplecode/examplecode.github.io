@@ -404,7 +404,7 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;这是一个非常棒的在线处理android图标的一个工具，强烈推荐 ！完全按照android的设计规范，输出不同规格的图标资源。同时还提供了很多现成的矢量图资源，对于缺少设计的android程序员真是一大福利。我做的浏览器产品完全依赖于这个工具实现大家可以看看实际效果 &lt;a href=&quot;http://xbrowser.me&quot;&gt;http://xbrowser.me&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;http://romannurik.github.io/AndroidAssetStudio/index.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://romannurik.github.io/AndroidAssetStudio/index.html&quot;&gt;http://romannurik.github.io/AndroidAssetStudio/index.html&lt;/a&gt;  （可能需要翻墙）&lt;/p&gt;
 
 &lt;h3 id=&quot;asscii&quot;&gt;Asscii流程图绘制&lt;/h3&gt;
 
