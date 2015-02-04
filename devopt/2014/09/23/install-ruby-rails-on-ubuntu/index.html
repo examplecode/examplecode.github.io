@@ -136,6 +136,16 @@
 
 <h2 id="step2--ruby">step2 安装 ruby</h2>
 
+<p>在国内安装ruby比较慢所以先修改rvm的镜像源到淘宝的服务器</p>
+
+<pre><code>sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+</code></pre>
+
+<p>列出当前可安装的ruby版本</p>
+
+<pre><code>rvm list known
+</code></pre>
+
 <p>选择当前最新的稳定版本</p>
 
 <pre><code>rvm install 2.1.2

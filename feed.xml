@@ -99,6 +99,16 @@ gollum
 
 &lt;h2 id=&quot;step2--ruby&quot;&gt;step2 安装 ruby&lt;/h2&gt;
 
+&lt;p&gt;在国内安装ruby比较慢所以先修改rvm的镜像源到淘宝的服务器&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sed -i -e &#39;s/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g&#39; ~/.rvm/config/db
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;列出当前可安装的ruby版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rvm list known
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;选择当前最新的稳定版本&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;rvm install 2.1.2
