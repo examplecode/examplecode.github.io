@@ -132,7 +132,7 @@
 看看这个界面的运行效果，看看界面的布局是否达到预期 Junit就满足不了我们的要求。通常我们不得不创建一个很小的demo来演示我们的界面，那么UITestRunner就是帮助android开发者解决类似的问
 题的，其实他就是你需要的那个很小的demo,只是他更加方便的以类似JUnitTest的方式把你的所有用例组织起来（你只要写一个以“test”开头的方法即可），并且把这些用例以列表的方式显示出来，测试其中一个用例，只需要点击列表项即可。</p>
 
-<p><strong>源码地址:</strong><a href="https://github.com/examplecode/android-ui-test-runner">https://github.com/examplecode/android-ui-test-runner</a> </p>
+<p><strong>源码地址:</strong><a href="https://github.com/examplecode/android-ui-test-runner">https://github.com/examplecode/android-ui-test-runner</a></p>
 
 <p><img style="float:left" src="/images/UITestRnnner-TestSuite.png" alt="测试套件列表" title="测试套件列表" width="300" /></p>
 
@@ -158,9 +158,9 @@
 <pre><code>选择你的项目 -&gt; 选择Properties(右键菜单) -&gt; 选择Android 
 </code></pre>
 
-<p>这时候你会看到下面这个界面,点击Add把UITestRunner添加进来。 </p>
+<p>这时候你会看到下面这个界面,点击Add把UITestRunner添加进来。</p>
 
-<p><img src="/images/Depend-UITestRunner.png" alt="设置依赖UITestRunner" /> </p>
+<p><img src="/images/Depend-UITestRunner.png" alt="设置依赖UITestRunner" /></p>
 
 <h3 id="step3-uitestrunner">step3 添加UITestRunner的声明</h3>
 
@@ -177,7 +177,7 @@
 
 <p>你可以根据不同的测试类型创建多个测试套件，创建测试套件很简单只需要创建一个Class从UITestSuite继承即可。建议我们创建一个package来存放所有的测试套件(不是必须只是为了清楚易于维护，包名可以自己定义), 如下图所示:</p>
 
-<p><img src="/images/TestSuite-Package.png" alt="测试套件放置到一个统一的package下" /> </p>
+<p><img src="/images/TestSuite-Package.png" alt="测试套件放置到一个统一的package下" /></p>
 
 <p>测试套件的实现代码如下所示：</p>
 
