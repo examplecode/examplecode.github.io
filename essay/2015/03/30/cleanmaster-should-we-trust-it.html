@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta name="description" content="XBrowser 猎豹清理大师">
+
+  <title>
+    
+      猎豹清理大师值得我们信任么？ &middot; Example Code
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/poole.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="stylesheet" href="/assets/css/hyde.css">
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+
+  <div class="sidebar-about">
+      <h1>
+        <a href="">
+          Example Code
+        </a>
+        <hr>
+      </h1>
+      <p class="lead">自由懒散的程序员一枚，因为懒，所以喜欢极简主义，憎恨一切形式化的东西。不喜欢写BLOG，遇见了Jekyll，发现Blog也像写代码的方式一样来写.</p>
+
+  </div>
+
+  <div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">首页</a>
+
+      
+
+      
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about">关于</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/archive">归档</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/categories">分类</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/tags">Tags</a>
+          
+        
+      
+    </nav>
+    
+  </div>
+
+    <div>
+
+     <a href="mailto:chengkai.me@gmail.com"><img class="contact-icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNODUuOSwyMC4ySDE0LjFjLTEuNCwwLTIuNiwxLjEtMi42LDIuNnY1LjFjMCwwLjIsMC4zLDAuNSwwLjUsMC42bDM3LjgsMjEuNmMwLjEsMC4xLDAuMiwwLjEsMC4zLDAuMQ0KCQljMC4xLDAsMC4yLDAsMC4zLTAuMUw4NywyOC41YzAuMi0wLjEsMC44LTAuNCwxLTAuNmMwLjItMC4yLDAuNS0wLjMsMC41LTAuNnYtNC42Qzg4LjUsMjEuMyw4Ny40LDIwLjIsODUuOSwyMC4yeiIvPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik04OC4yLDM1LjZjLTAuMi0wLjEtMC40LTAuMS0wLjYsMEw2Ni44LDQ3LjljLTAuMiwwLjEtMC4zLDAuMy0wLjMsMC41YzAsMC4yLDAsMC40LDAuMiwwLjVsMjAuNywyMi40DQoJCWMwLjEsMC4xLDAuMywwLjIsMC41LDAuMmMwLjEsMCwwLjIsMCwwLjIsMGMwLjItMC4xLDAuNC0wLjMsMC40LTAuNlYzNi4yQzg4LjUsMzYsODguNCwzNS44LDg4LjIsMzUuNnoiLz4NCgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjAuOCw1MS45Yy0wLjItMC4yLTAuNS0wLjMtMC44LTAuMWwtOC4zLDQuOWMtMSwwLjYtMi4yLDAuNi0zLjIsMGwtNy4zLTQuMmMtMC4yLTAuMS0wLjUtMC4xLTAuOCwwLjENCgkJTDEyLjcsNzguNGMtMC4xLDAuMS0wLjIsMC4zLTAuMiwwLjVjMCwwLjIsMC4xLDAuNCwwLjMsMC41YzAuNCwwLjMsMC44LDAuNCwxLjMsMC40aDcxLjJjMC4zLDAsMC41LTAuMiwwLjYtMC40DQoJCWMwLjEtMC4yLDAuMS0wLjUtMC4xLTAuN0w2MC44LDUxLjl6Ii8+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM0LjMsNDkuNmMwLjItMC4xLDAuMi0wLjMsMC4yLTAuNWMwLTAuMi0wLjEtMC40LTAuMy0wLjVMMTIuNSwzNi4xYy0wLjItMC4xLTAuNC0wLjEtMC42LDANCgkJYy0wLjIsMC4xLTAuMywwLjMtMC4zLDAuNnYzMi42YzAsMC4zLDAuMSwwLjUsMC40LDAuNmMwLjEsMCwwLjIsMC4xLDAuMywwLjFjMC4yLDAsMC4zLTAuMSwwLjQtMC4yTDM0LjMsNDkuNnoiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="Email" width="32" height="32" /></a>
+
+     <a href="https://github.com/examplecode"><img class="contact-icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNTAsMTJjLTIxLjUsMC0zOSwxNy41LTM5LDM5YzAsMTcuMiwxMS4yLDMxLjgsMjYuNywzN2MyLDAuNCwyLjctMC44LDIuNy0xLjljMC0wLjksMC0zLjQtMC4xLTYuNg0KCQljLTEwLjgsMi40LTEzLjEtNS4yLTEzLjEtNS4yYy0xLjgtNC41LTQuMy01LjctNC4zLTUuN2MtMy41LTIuNCwwLjMtMi40LDAuMy0yLjRjMy45LDAuMyw2LDQsNiw0YzMuNSw2LDkuMSw0LjIsMTEuNCwzLjINCgkJYzAuNC0yLjUsMS40LTQuMiwyLjUtNS4yYy04LjctMS0xNy44LTQuMy0xNy44LTE5LjNjMC00LjMsMS41LTcuNyw0LTEwLjVjLTAuNC0xLTEuNy00LjksMC40LTEwLjNjMCwwLDMuMy0xLDEwLjcsNA0KCQljMy4xLTAuOSw2LjQtMS4zLDkuOC0xLjNjMy4zLDAsNi43LDAuNCw5LjgsMS4zYzcuNC01LDEwLjctNCwxMC43LTRjMi4xLDUuNCwwLjgsOS4zLDAuNCwxMC4zYzIuNSwyLjcsNCw2LjIsNCwxMC41DQoJCWMwLDE1LTkuMSwxOC4zLTE3LjgsMTkuMmMxLjQsMS4yLDIuNiwzLjYsMi42LDcuMmMwLDUuMiwwLDkuNCwwLDEwLjdjMCwxLDAuNywyLjMsMi43LDEuOUM3Ny44LDgyLjgsODksNjguMiw4OSw1MQ0KCQlDODksMjkuNCw3MS41LDEyLDUwLDEyeiIvPg0KPC9nPg0KPC9zdmc+DQo=" alt="GitHub" width="32" height="32" /></a>
+
+     <p>&copy; 2016. All rights reserved.</p>
+    
+   <!--  start of Google Analytics  -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45771839-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!--  end of Google Analytics  -->
+    </div>
+
+
+</div>
+
+
+
+
+    <div class="content container">
+
+       
+   
+      <div class="post">
+  <h1 class="post-title">猎豹清理大师值得我们信任么？</h1>
+  <span class="post-date">30 Mar 2015</span>
+  <p>大家应该都还记得前几日在各大媒体和朋友圈疯转的一片文章《傅盛豹变》我也读了这边文章，说实话文章写的很棒，看的我也是心潮澎湃。一向不怎么刷朋友圈的我，不仅转发而且还特地专门发给了几个身边的朋友希望大家都能够从猎豹和傅盛先生那里学到一些东西或者有所感悟。我自己也是看了这篇文章后怀着无比崇敬的心情安装了猎豹清理这个产品进行观摩学习。不曾想才过去短短的几天我就改变了对这款产品的看法。</p>
+
+<p>无意专门抹黑猎豹，只是希望此文能够唤醒做安全软件的企业们的一些责任心，对的起用户对你们的信任。你们不仅掌握着操作系统的至高无上的权限而且还掌握着对普通应用的生杀大权。无它求，只希望你们能够在行使你们的生杀大权的时候不要这么随意的草菅人命。相信对于大公司的产品你们都会认真对待，容不得半点马虎，但是对于苦逼的创业者和个人开发者就应该活该遭受这种待遇么？</p>
+
+<p>事情是这样的，我是一位个人开发者，辞去公司的工作花费了半年多的时间做了一款产品 <a href="http://www.xbext.com">XBrowser</a> ，最近刚刚苦逼的把应用上传到国内的各大应用市场(这里的苦逼事情其实也够写一篇长文的，某些应用市场对于浏览器产品特别敏感，拿出各种各样的理由拒绝你)。日子过的很苦逼也很充实，一边自己想办法推广产品，一边继续写代码更新产品满足用户的需求。程序员那些推广手段你懂的，无非就是在论坛发发帖，无奈之下还注册几个马甲用户顶顶自己的帖子。大概是没有经验，很多次被人嘲笑“你这托儿简直是侮辱我们的智商”。没有办法就傻乎乎的承认自己是 “托儿“。。。</p>
+
+<p>身边的朋友都对我说，浏览器这样的产品是商业巨头玩儿的游戏，你一个个人开发者就别在这儿凑热闹了。每当这个时候我总是呵呵一笑，谁叫咱有这个产品情节呢，现在做的事情就是让将来自己老了以后没有机会鄙视现在的我(这个理由相当有逼格，每当别人质疑我的时候或则我自己质疑自己的时候都会把它搬出来)。就这样在别人的质疑，我的自我怀疑，和我的自我调整中，痛并快乐着，坚持着做着我的产品。好不容易积攒了几千用户，虽然不多但是确实每天增长的趋势。同时确实也赢得了不少用户对产品的好评和称赞，在此感谢给与我鼓励和支持的用户。文章篇幅有限，贴几个用户反馈截图。</p>
+
+<p><img src="/images/feedback_01.png" alt="" />  <img src="/images/feedback_02.png" alt="" /></p>
+
+<p>然而，老天并不会因为你苦逼就眷顾你，反而会更加雪上加霜的考验你。就在几天前突然发现了几个应用市场的增长突然下降，新增用户变成了个位数，次日留存也从以前的30%以上变成了10%-20% ，搞得我十分沮丧，真的不知道问题出在了那里？于此同时我也在论坛收到了用户反馈，说我的浏览器有病毒，于是我开始追问到底是什么软件提示存在病毒。很遗憾用户并没有回答我这个问题。当时并没有意识到事态多么严重，觉得可能是那个不知名的山寨安全软件的误报而已。就在今天我习惯的打开猎豹清理清扫清扫手机里的垃圾，不得不说清理工具都是抓住了很多强迫症的痛点，无时无刻的不报告你的系统中存在着多少垃圾，你的系统系统健康指数是多少，这招屡试不爽。恍然间，一个大大的警告出现在屏幕 “发现了木马程序“ ，我先是一惊，在手机上碰到木马对我来讲真是头一遭，从来没有遇到过这种情况（android是基于linux系统其安全级别要比windows中高得多，真的是不是那么容易能够遭遇木马的）。接下来又是大大的一惊，搁着以前凭着对这些“安全卫士”的信任，我会毫不犹豫的把携带木马程序删之（管你是什么程序，哪怕是微信也要先干掉再说),可是令人难以置信的是这个木马程序偏偏是自己呕心沥血半年的作品,当时我的脑袋都蒙了。</p>
+
+<p><img src="/images/xbrowser-torj.png" alt="" /></p>
+
+<p>据报道，猎豹清理有4亿活跃用户，光应用宝这个一个渠道就赫然写着1.6亿的下载，这是一个什么概念？ 不夸张的讲，如果猎豹清理报告你这个产品是个木马或病毒，会让你这个产品顷刻灰飞烟灭。当时真的是万念俱灰，我赶紧发送邮件给猎豹清理的客服人员，多方面找朋友问问猎豹内部的熟人赶紧帮忙解决这个问题。同时我也做好了被灰飞烟灭的准备，半年的努力全完了，还是拍拍屁股老老实实的找工作上班去吧。</p>
+
+<p>一个小时后猎豹清理的客服人员联系到了我，令人欣慰的是猎豹清理的工作人员还是及时认识到了是自己的问题，答应立刻给与解决。当时我心说，尼玛，等你解决掉估计我的产品也不复存在了，但是本着死要死的明白的原则，我一定得弄清楚事情的缘由，不能白死，也好给后面的个人开发者一些借鉴. 于是就继续有了下面的对话追问事情缘由。不做评价，直接上部分对话截图。</p>
+
+<p><img src="/images/chat-log-01.png" alt="" /></p>
+
+<p><img src="/images/chat-log-02.png" alt="" /></p>
+
+<p>有时候上天总是在考验你的耐心，事情总是不是进展的那么顺利。猎豹清理客服说已经处理过这个问题了，可是我的手机依然还是提示。</p>
+
+<p><img src="/images/chat-log-03.png" alt="" /></p>
+
+<p>没有办法，又转到了猎豹的技术人员。：（</p>
+
+<p><img src="/images/chat-log-04.png" alt="" /></p>
+
+<p><img src="/images/chat-log-05.png" alt="" /></p>
+
+<p>到此事情总算解决了，事态好像也没有想象的那么严重，产品用户是受到了影响，但是还没有到了灰飞烟灭的程度，野火烧不尽，春风吹又生。小草的生命力还是很顽强的。还是那句话，再小的开发者也是个生命。对于掌握生杀大权的安全厂商们，请你们挣钱的时候也看看脚下，别践踏无辜的生命。在执行一个软件生死之前，你是否真的拿到了它的罪证。搞安全的程序员同行们，你们的每一行代码也会关系到你的苦逼同行们的生死请务必慎重，谢谢。</p>
+
+<h3 id="section">后记</h3>
+
+<p>互联网这个圈子总是很小，猎豹团队的反应速度也足够快，昨天晚上发布的文章，今天猎豹清理的负责人就看到了这篇文章，上午的时候猎豹清理项目的负责人就找到了我，本来以为是过来公关的，没有想到却是又一次诚恳的道歉，反而搞的我有点不太好意思了，在这里赞一下猎豹团队的服务态度。个人认为他们能够获得那么大的用户和背后的服务团队也是分不开的。</p>
+
+
+</div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/tools/2014/09/26/install-gollum-in-mac-109">
+            markdown + git 最适合程序员的wiki系统
+            <small>26 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/devopt/2014/09/23/install-ruby-rails-on-ubuntu">
+            ubuntu下安装ruby rails环境
+            <small>23 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service">
+            自己搭建的google搜索镜像服务
+            <small>02 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div>
+ <!-- 多说评论框 start -->
+	<!-- Duoshuo Comment BEGIN -->
+    <div id="comments">
+        <div class="ds-thread" data-thread-key="/essay/2015/03/30/cleanmaster-should-we-trust-it"  data-title="猎豹清理大师值得我们信任么？ - Example Code"></div>
+    </div>
+<!-- Duoshuo Comment END -->
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"examplecode"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>
+
+
+    </div>
+
+  </body>
+</html>

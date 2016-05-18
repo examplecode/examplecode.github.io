@@ -12,7 +12,7 @@
 
 &lt;p&gt;无意专门抹黑猎豹，只是希望此文能够唤醒做安全软件的企业们的一些责任心，对的起用户对你们的信任。你们不仅掌握着操作系统的至高无上的权限而且还掌握着对普通应用的生杀大权。无它求，只希望你们能够在行使你们的生杀大权的时候不要这么随意的草菅人命。相信对于大公司的产品你们都会认真对待，容不得半点马虎，但是对于苦逼的创业者和个人开发者就应该活该遭受这种待遇么？&lt;/p&gt;
 
-&lt;p&gt;事情是这样的，我是一位个人开发者，辞去公司的工作花费了半年多的时间做了一款产品 &lt;a href=&quot;http://xbrowser.me&quot;&gt;XBrowser&lt;/a&gt; ，最近刚刚苦逼的把应用上传到国内的各大应用市场(这里的苦逼事情其实也够写一篇长文的，某些应用市场对于浏览器产品特别敏感，拿出各种各样的理由拒绝你)。日子过的很苦逼也很充实，一边自己想办法推广产品，一边继续写代码更新产品满足用户的需求。程序员那些推广手段你懂的，无非就是在论坛发发帖，无奈之下还注册几个马甲用户顶顶自己的帖子。大概是没有经验，很多次被人嘲笑“你这托儿简直是侮辱我们的智商”。没有办法就傻乎乎的承认自己是 “托儿“。。。&lt;/p&gt;
+&lt;p&gt;事情是这样的，我是一位个人开发者，辞去公司的工作花费了半年多的时间做了一款产品 &lt;a href=&quot;http://www.xbext.com&quot;&gt;XBrowser&lt;/a&gt; ，最近刚刚苦逼的把应用上传到国内的各大应用市场(这里的苦逼事情其实也够写一篇长文的，某些应用市场对于浏览器产品特别敏感，拿出各种各样的理由拒绝你)。日子过的很苦逼也很充实，一边自己想办法推广产品，一边继续写代码更新产品满足用户的需求。程序员那些推广手段你懂的，无非就是在论坛发发帖，无奈之下还注册几个马甲用户顶顶自己的帖子。大概是没有经验，很多次被人嘲笑“你这托儿简直是侮辱我们的智商”。没有办法就傻乎乎的承认自己是 “托儿“。。。&lt;/p&gt;
 
 &lt;p&gt;身边的朋友都对我说，浏览器这样的产品是商业巨头玩儿的游戏，你一个个人开发者就别在这儿凑热闹了。每当这个时候我总是呵呵一笑，谁叫咱有这个产品情节呢，现在做的事情就是让将来自己老了以后没有机会鄙视现在的我(这个理由相当有逼格，每当别人质疑我的时候或则我自己质疑自己的时候都会把它搬出来)。就这样在别人的质疑，我的自我怀疑，和我的自我调整中，痛并快乐着，坚持着做着我的产品。好不容易积攒了几千用户，虽然不多但是确实每天增长的趋势。同时确实也赢得了不少用户对产品的好评和称赞，在此感谢给与我鼓励和支持的用户。文章篇幅有限，贴几个用户反馈截图。&lt;/p&gt;
 
@@ -80,7 +80,7 @@
 
 &lt;p&gt;在安装的时候会出现找不到libiconv所以需要安装下面的依赖库&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;brew install libxml2 libxslt
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install libxml2 libxslt
 brew link libxml2 libxslt --force
 wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
 tar xvfz libiconv-1.13.1.tar.gz
@@ -89,41 +89,47 @@ cd libiconv-1.13.1
 make
 sudo make install
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;通过Gem安装 gollum&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[sudo] gem install gollum
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[sudo] gem install gollum
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;源码安装&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/gollum/gollum
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/gollum/gollum
 cd gollum
 bundle install
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;安装成功后尝试着在终端输入下面的命令，如果能够正常显示版本号则说明安装成功.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gollum --v
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gollum --v
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;wiki&quot;&gt;创建自己的wiki系统&lt;/h2&gt;
 
 &lt;p&gt;接下来我们就可以建立自己的wiki系统了，建立一个名字为”wiki”的目录使用git进行管理。进入到wiki目录，在wiki目录下启动gollum&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mkdir wiki
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir wiki
 cd wiki
 git init
 gollum
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;显示如下：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[2015-01-21 14:03:45] INFO  WEBrick 1.3.1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[2015-01-21 14:03:45] INFO  WEBrick 1.3.1
 [2015-01-21 14:03:45] INFO  ruby 2.0.0 (2013-05-14) [x86_64-darwin12.4.1]
 == Sinatra/1.4.5 has taken the stage on 4567 for development with backup from WEBrick
 [2015-01-21 14:03:45] INFO  WEBrick::HTTPServer#start: pid=17699 port=4567
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;接下就可以在浏览器中访问了 http://localhost:4567/&lt;/p&gt;
 
@@ -139,39 +145,45 @@ gollum
         <title>ubuntu下安装ruby rails环境</title>
         <description>&lt;h2 id=&quot;step1-rvm&quot;&gt;step1 安装rvm&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt; curl -L https://get.rvm.io | bash -s stable
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; curl -L https://get.rvm.io | bash -s stable
  source ~/.rvm/scripts/rvm
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;step2--ruby&quot;&gt;step2 安装 ruby&lt;/h2&gt;
 
 &lt;p&gt;在国内安装ruby比较慢所以先修改rvm的镜像源到淘宝的服务器&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sed -i -e &#39;s/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g&#39; ~/.rvm/config/db
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sed -i -e &#39;s/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g&#39; ~/.rvm/config/db
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;列出当前可安装的ruby版本&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;rvm list known
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm list known
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;选择当前最新的稳定版本&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;rvm install 2.1.2
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install 2.1.2
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;step3-&quot;&gt;step3 替换默认镜像&lt;/h2&gt;
 
 &lt;p&gt;使用国内较近的镜像：替换为taobao镜像&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem source -r https://rubygems.org/
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem source -r https://rubygems.org/
 gem source -a https://ruby.taobao.org
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;step4-rails&quot;&gt;step4 安装rails&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;gem install rails
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install rails
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0800</pubDate>
         <link>http://examplecode.github.io/devopt/2014/09/23/install-ruby-rails-on-ubuntu</link>
@@ -188,15 +200,17 @@ gem source -a https://ruby.taobao.org
 
 &lt;h3 id=&quot;step1-mproxy&quot;&gt;step1 下载并编译mproxy&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;clone https://github.com/examplecode/mproxy
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;clone https://github.com/examplecode/mproxy
 cd mproxy
 gcc -o mproxy mproxy.c
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;step2-proxy&quot;&gt;step2 在命令行启动proxy&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;./mproxy -l 8081 -h m.mmbox.me -E -d
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./mproxy -l 8081 -h m.mmbox.me -E -d
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;step-3-chrome-&quot;&gt;step 3 以命令行的方式启动Chrome 浏览器&lt;/h3&gt;
 
@@ -204,15 +218,17 @@ gcc -o mproxy mproxy.c
 
 &lt;h4 id=&quot;mac-&quot;&gt;Mac 版本&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;cd /Applications/Google\ Chrome.app/Contents/MacOS
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Applications/Google\ Chrome.app/Contents/MacOS
 ./Google\ Chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;linux-&quot;&gt;linux 版本&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;cd /path/of/chrome
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /path/of/chrome
 ./chrome --proxy-pac-url=http://m.mmbox.me/mproxy.pac
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;在完成以上步骤后就可以畅通无阻的使用Google了，enjoy it ! :)&lt;/p&gt;
 
@@ -245,8 +261,9 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;翻墙的原理，一句话搞明白。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; Browser --&amp;gt; mproxy(local proxy)  --&amp;gt; mproxy (remte proxy) -&amp;gt; 墙外的世界
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Browser --&amp;gt; mproxy(local proxy)  --&amp;gt; mproxy (remte proxy) -&amp;gt; 墙外的世界
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;mproxy--1&quot;&gt;mproxy 需要单独的服务器资源么？&lt;/h3&gt;
 
@@ -275,8 +292,9 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;直接使用重定向命令即可&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./mproxy -l 8081 -D -d &amp;gt; out_8081.log 2&amp;gt;&amp;amp;1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./mproxy -l 8081 -D -d &amp;gt; out_8081.log 2&amp;gt;&amp;amp;1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;关于测试服务器&lt;/h2&gt;
 
@@ -289,8 +307,9 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;再你的本地服务器启动mproxy使用如下命令:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./mproxy -h 162.243.247.187:8080 -E -d
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./mproxy -h 162.243.247.187:8080 -E -d
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;vps&quot;&gt;关于vps&lt;/h2&gt;
 
@@ -326,15 +345,17 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;按照以下的步骤操作：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;File -&amp;gt; Import -&amp;gt; Existing Android Code Into WorkSpace
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;File -&amp;gt; Import -&amp;gt; Existing Android Code Into WorkSpace
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;step2--uitestrunner&quot;&gt;step2 在你的项目中设置依赖 UITestRunner&lt;/h3&gt;
 &lt;p&gt;UITestRunner 是以lib类型的工程存在，我们必须设置我们的项目依赖UITestRunner.
 按照以下步骤操作：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;选择你的项目 -&amp;gt; 选择Properties(右键菜单) -&amp;gt; 选择Android 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;选择你的项目 -&amp;gt; 选择Properties(右键菜单) -&amp;gt; 选择Android 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;这时候你会看到下面这个界面,点击Add把UITestRunner添加进来。&lt;/p&gt;
 
@@ -344,12 +365,12 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;在你自己项目的AndroidManifest.xml中添加以下内容声明UITestActivity(测试用例的展示界面)&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;com.mmbox.uitestrunner.UITestActivity&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.mmbox.uitestrunner.UITestActivity&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;com.mmbox.uitestrunner.Main&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;android.intent.category.DEFAULT&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.mmbox.uitestrunner.Main&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.category.DEFAULT&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step4-&quot;&gt;step4 创建你自己的测试套件&lt;/h3&gt;
 
@@ -359,45 +380,46 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;测试套件的实现代码如下所示：&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated constructor stub&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step6-&quot;&gt;step6 为已有的测试套件添加测试用例&lt;/h3&gt;
 
 &lt;p&gt;添加测试用例很简单，只需要在测试套件中增加一些以 “test” 开头的 public 方法即可，如以下代码：&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MySampleTestSuite1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UITestSuite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MySampleTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated constructor stub&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testSayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello UITestRunner&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testSayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello UITestRunner&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase1InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testCase1InTestSuite1 is runngin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testCase1InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;testCase1InTestSuite1 is runngin&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase2InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testCase2InTestSuite1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
     &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;testCase2InTestSuite1 is runngin&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;testCase2InTestSuite1 is runngin&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step5-&quot;&gt;step5 启动测试用例&lt;/h3&gt;
 
 &lt;p&gt;完成以上步骤就可以通过eclise安装项目到你的设备或模拟器中了，启动测试用例很简单只需要输入下面的命令即可.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;adb shell am start -a com.mmbox.uitestrunner.Main
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adb shell am start -a com.mmbox.uitestrunner.Main
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;一切正常的话你将会看到下面的界面:&lt;/p&gt;
 
@@ -411,12 +433,12 @@ gcc -o mproxy mproxy.c
 
 &lt;h4 id=&quot;section&quot;&gt;代码&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Click Me&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Click Me&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WRAP_CONTENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ViewGroup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LayoutParams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;WRAP_CONTENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;showView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;section-1&quot;&gt;展示效果&lt;/h4&gt;
 
@@ -426,9 +448,9 @@ gcc -o mproxy mproxy.c
 
 &lt;h4 id=&quot;section-3&quot;&gt;代码&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testShowSimpleLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;showLayout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show_layout_demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;section-4&quot;&gt;展示效果&lt;/h4&gt;
 
@@ -470,7 +492,7 @@ gcc -o mproxy mproxy.c
 
 &lt;p&gt;下面是个demo&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;          +------------+        
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;          +------------+        
     +---&amp;gt; | BaseClass  | &amp;lt;--+   
     |     |            |    |   
     |     +------------+    |   
@@ -480,6 +502,7 @@ gcc -o mproxy mproxy.c
 |          |        |          |
 +----------+        +----------+
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;section-1&quot;&gt;正则表达式测试&lt;/h3&gt;
 
@@ -557,39 +580,46 @@ gcc -o mproxy mproxy.c
 
 &lt;h3 id=&quot;section&quot;&gt;编译&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;gcc -o gfw_dns_resolver  gfw_dns_resolver.c 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcc -o gfw_dns_resolver  gfw_dns_resolver.c 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;编译输出调试信息版本&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gcc -o gfw_dns_resolver -DDEBUG gfw_dns_resolver.c 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcc -o gfw_dns_resolver -DDEBUG gfw_dns_resolver.c 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;section-1&quot;&gt;运行示例&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;./gfw_dns_resolver www.twitter.com
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gfw_dns_resolver www.twitter.com
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;输出:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;The real ip is: 199.59.149.230
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The real ip is: 199.59.149.230
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;java-&quot;&gt;JAVA 版本&lt;/h2&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;编译&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;javac GFWDnsResolver.java
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;javac GFWDnsResolver.java
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;运行示例&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;java GFWDnsResolver www.youtube.com
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java GFWDnsResolver www.youtube.com
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;输出：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;host:www.youtube.com The real ip is:173.194.72.102
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;host:www.youtube.com The real ip is:173.194.72.102
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/examplecode/gfw_dns_resolver&quot;&gt;前往 github 源码地址&lt;/a&gt;&lt;/p&gt;
 

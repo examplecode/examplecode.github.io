@@ -9,11 +9,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  
+  <meta name="description" content="">
 
   <title>
     
-      分类 &middot; Example Code
+      markdown + git 最适合程序员的wiki系统 &middot; Example Code
     
   </title>
 
@@ -70,7 +70,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/categories">分类</a>
+            <a class="sidebar-nav-item" href="/categories">分类</a>
           
         
       
@@ -124,132 +124,161 @@
     <div class="content container">
 
        
+    		<div style="
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+">
+<a href="http://www.xbext.com">最快，最简洁的手机浏览器,没有任何后台进程，省电省流，个人作品欢迎试用</a> 
+</div>
+       
    
-      <div class="page">
-  <h1 class="page-title">分类</h1>
-  <ul class="tag_box inline">
-  
-  
+      <div class="post">
+  <h1 class="post-title">markdown + git 最适合程序员的wiki系统</h1>
+  <span class="post-date">26 Sep 2014</span>
+  <p><a href="https://github.com/gollum/gollum">gollum</a> 是github的使用的一个基于markdown的 wiki系统。 最重要的是gollum直接和git集成不需要数据库，你可以选择在Web页面撰写文档，也可以用你喜欢的markdown工具编辑文档在命令行进行提交。 “markdown+git = wiki”  这对程序员来讲绝对是最棒的选择。</p>
 
+<p>Gollum wiki 的截图如下</p>
 
-  
-     
-    	<li><a href="#tools-ref">
-    		tools <span>4</span>
-    	</a></li>
-     
-    	<li><a href="#android-ref">
-    		android <span>1</span>
-    	</a></li>
-     
-    	<li><a href="#devopt-ref">
-    		devopt <span>1</span>
-    	</a></li>
-     
-    	<li><a href="#essay-ref">
-    		essay <span>1</span>
-    	</a></li>
-    
-  
+<p><img src="/assets/images/gollum-screenshot.png" alt="gollum截图" /></p>
 
+<p>Mac下安装的适合遇到了一些小问题，所以在这里记录一下安装过程 。</p>
 
-</ul>
+<h2 id="section">基本的环境</h2>
 
+<p>在安装之前，假定我们已经拥有了mac 下的包管理工具 homebrew 及 ruby 运行环境。我当前的工作环境如下:</p>
 
- 
-  <h2 id="tools-ref">tools</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/tools/2014/09/26/install-gollum-in-mac-109">markdown + git 最适合程序员的wiki系统</a></li>
-      
-    
-  
+<ol>
+  <li>Mac 10.9</li>
+  <li>homebrew 0.9</li>
+  <li>ruby 2.0</li>
+</ol>
 
-  
-    
-      
-      <li><a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service">自己搭建的google搜索镜像服务</a></li>
-      
-    
-  
+<h2 id="gollum">安装 Gollum</h2>
 
-  
-    
-      
-      <li><a href="/tools/2014/06/21/frequently-online-tools">一些非常棒的在线工具【绝对干货】</a></li>
-      
-    
-  
+<p>我们可以选择通过二进制或者源码的方式进行安装。</p>
 
-  
-    
-      
-      <li><a href="/tools/2014/06/20/the-tools-prevent-dns-cache-pollution">GFW DNS污染原理 - 防止DNS污染的小工具</a></li>
-      
-    
-  
+<h3 id="section-1">二进制安装</h3>
 
-  
+<p>在安装的时候会出现找不到libiconv所以需要安装下面的依赖库</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install libxml2 libxslt
+brew link libxml2 libxslt --force
+wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+tar xvfz libiconv-1.13.1.tar.gz
+cd libiconv-1.13.1
+./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+make
+sudo make install
+</code></pre>
+</div>
 
-  </ul>
- 
-  <h2 id="android-ref">android</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/android/2014/06/23/ui-test-runner-for-android">android下针对UI的单元测试工具</a></li>
-      
-    
-  
+<p>通过Gem安装 gollum</p>
 
-  
+<div class="highlighter-rouge"><pre class="highlight"><code>[sudo] gem install gollum
+</code></pre>
+</div>
 
+<h3 id="section-2">源码安装</h3>
 
-  </ul>
- 
-  <h2 id="devopt-ref">devopt</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/devopt/2014/09/23/install-ruby-rails-on-ubuntu">ubuntu下安装ruby rails环境</a></li>
-      
-    
-  
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/gollum/gollum
+cd gollum
+bundle install
+</code></pre>
+</div>
 
-  
+<p>安装成功后尝试着在终端输入下面的命令，如果能够正常显示版本号则说明安装成功.</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>gollum --v
+</code></pre>
+</div>
 
-  </ul>
- 
-  <h2 id="essay-ref">essay</h2>
-  <ul>
-      
-    
-  
-    
-      
-      <li><a href="/essay/2015/03/30/cleanmaster-should-we-trust-it">猎豹清理大师值得我们信任么？</a></li>
-      
-    
-  
+<h2 id="wiki">创建自己的wiki系统</h2>
 
-  
+<p>接下来我们就可以建立自己的wiki系统了，建立一个名字为”wiki”的目录使用git进行管理。进入到wiki目录，在wiki目录下启动gollum</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir wiki
+cd wiki
+git init
+gollum
+</code></pre>
+</div>
 
-  </ul>
+<p>显示如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[2015-01-21 14:03:45] INFO  WEBrick 1.3.1
+[2015-01-21 14:03:45] INFO  ruby 2.0.0 (2013-05-14) [x86_64-darwin12.4.1]
+== Sinatra/1.4.5 has taken the stage on 4567 for development with backup from WEBrick
+[2015-01-21 14:03:45] INFO  WEBrick::HTTPServer#start: pid=17699 port=4567
+</code></pre>
+</div>
+
+<p>接下就可以在浏览器中访问了 http://localhost:4567/</p>
+
+<p>创建wiki文档可以选择在全部Web界面进行操作，也可以选择在终端命令行进行提交管理markdown文件，在浏览器中进行查看。</p>
+
 
 </div>
+
+<div class="related">
+  <h2>相关文章</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/essay/2015/03/30/cleanmaster-should-we-trust-it">
+            猎豹清理大师值得我们信任么？
+            <small>30 Mar 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/devopt/2014/09/23/install-ruby-rails-on-ubuntu">
+            ubuntu下安装ruby rails环境
+            <small>23 Sep 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/tools/2014/07/02/build-your-own-google-search-mirrors-service">
+            自己搭建的google搜索镜像服务
+            <small>02 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div>
+ <!-- 多说评论框 start -->
+	<!-- Duoshuo Comment BEGIN -->
+    <div id="comments">
+        <div class="ds-thread" data-thread-key="/tools/2014/09/26/install-gollum-in-mac-109"  data-title="markdown + git 最适合程序员的wiki系统 - Example Code"></div>
+    </div>
+<!-- Duoshuo Comment END -->
+
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"examplecode"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</div>
+
 
     </div>
 
