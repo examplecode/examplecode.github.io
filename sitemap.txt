@@ -1,11 +1,11 @@
 
-/about
-/archive
-/categories
+/about.html
+/archive.html
+/categories.html
 /feed.xml
-/
+/index.html
 /sitemap.txt
-/tags
+/tags.html
 
 /essay/2015/03/30/cleanmaster-should-we-trust-it
 /tools/2014/09/26/install-gollum-in-mac-109
